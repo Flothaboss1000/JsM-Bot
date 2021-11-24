@@ -71,6 +71,89 @@ a:active {
   --baseColor2: #543d8f;
 }
 
+#maintitle {
+  animation-name: flicker-4;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes flicker-4 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  31.98% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  32.8% {
+    opacity: 0;
+  }
+  32.82% {
+    opacity: 1;
+  }
+  34.98% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  35.7% {
+    opacity: 0;
+  }
+  35.72% {
+    opacity: 1;
+  }
+  36.98% {
+    opacity: 1;
+  }
+  37% {
+    opacity: 0;
+  }
+  37.6% {
+    opacity: 0;
+  }
+  37.62% {
+    opacity: 1;
+  }
+  67.98% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+  }
+  68.4% {
+    opacity: 0;
+  }
+  68.42% {
+    opacity: 1;
+  }
+  95.98% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  96.7% {
+    opacity: 0;
+  }
+  96.72% {
+    opacity: 1;
+  }
+  98.98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  99.6% {
+    opacity: 0;
+  }
+  99.62% {
+    opacity: 1;
+  }
+}
 .titlebg img {
   z-index: -1;
   border-radius: 200px;
@@ -145,6 +228,65 @@ a:active {
 .button:hover {
   transition: 0.2s;
   border-radius: 10px;
+}
+
+.mySlides1,
+.mySlides2 {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  border-radius: 20px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  transition: 0.6s;
+  border-radius: 20px;
+}
+.slideshow-container:hover {
+  box-shadow: 0px 20px 50px #7600e4;
+  transition: 0.2s;
+}
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+  color: white;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -45px;
+  color: rgba(255, 255, 255, 0.322);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 55px;
+  user-select: none;
+  line-height: 0px;
+}
+.prev a span,
+.next a span {
+  position: absolute;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a grey background color */
+.prev:hover,
+.next:hover {
+  background-color: #9e29ff;
 }
 
 .cmdselect {
