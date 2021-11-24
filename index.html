@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>JsM Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="shortcut icon" type="image/jpg" href="./assets/logo.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="titlebg">
+      <img
+        src="assets/logoo.png"
+        alt=""
+        height="300"
+        width="300"
+        id="biglogo"
+      />
+    </div>
+    <h1 id="maintitle" style="text-align: center">JsM Bot</h1>
+    <p style="margin-top: 0px; text-align: center">
+      A powerful and multipurpose Discord bot
+    </p>
+    <br />
+
+    <div class="mainbutton">
+      <div class="center">
+        <button class="button">
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
+            target="_blank"
+          >
+            <span class="material-icons md-36">send</span>
+            <p>Invite Me</p>
+          </a>
+        </button>
+        <button class="button">
+          <a href="https://top.gg/bot/870932828504866816" target="_blank">
+            <span class="material-icons md-36">open_in_new</span>
+            <p>Top.gg</p>
+          </a>
+        </button>
+        <button class="button">
+          <a href="#cdmheader">
+            <span class="material-icons md-36">terminal</span>
+            <p>Commands</p>
+          </a>
+        </button>
+      </div>
+    </div>
+    <br />
+    <h2>Why JsM?</h2>
+    <br />
+    <p>Awesome and creative image commands!</p>
+    <br />
+    <h2 id="cdmheader">Commands</h2>
+    <br />
+    <!-- Control buttons -->
+    <div id="myBtnContainer" class="cmdselect">
+      <button
+        class="cmdbtn active"
+        onclick="filterSelection('')"
+        id="cmdbtn_red"
+      >
+        <span class="material-icons md-36"> apps </span>
+        <p>All</p>
+      </button>
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('mod')"
+        id="cmdbtn_orange"
+      >
+        <span class="material-icons md-36">gavel</span>
+        <p>Moderation</p>
+      </button>
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('fun')"
+        id="cmdbtn_yellow"
+      >
+        <span class="material-icons md-36">celebration</span>
+        <p>Fun</p>
+      </button>
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('util')"
+        id="cmdbtn_green"
+      >
+        <span class="material-icons md-36">settings</span>
+        <p>Utility</p>
+      </button>
+      <button class="cmdbtn" onclick="filterSelection('img')" id="cmdbtn_teal">
+        <span class="material-icons md-36">image</span>
+        <p>Image</p>
+      </button>
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('music')"
+        id="cmdbtn_cyan"
+      >
+        <span class="material-icons md-36">music_note</span>
+        <p>Music</p>
+      </button>
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('maths')"
+        id="cmdbtn_blue"
+      >
+        <span class="material-icons md-36">calculate</span>
+        <p>Maths</p>
+      </button>
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('chem')"
+        id="cmdbtn_purple"
+      >
+        <span class="material-icons md-36">science</span>
+        <p>Chemistry</p>
+      </button>
+      <button class="cmdbtn" onclick="filterSelection('prog')" id="cmdbtn_pink">
+        <span class="material-icons md-36">code</span>
+        <p>Programming</p>
+      </button>
+    </div>
+
+    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+
+    <div class="container">
+      <div class="filterDiv mod">
+        <h3>mute</h3>
+        <p>Mutes a user</p>
+        <code>j mute @user</code>
+      </div>
+      <div class="filterDiv mod">
+        <h3>unmute</h3>
+        <p>Unmutes a user</p>
+        <code>j unmute @user</code>
+      </div>
+      <div class="filterDiv mod">
+        <h3>purge</h3>
+        <p>Clears messages</p>
+        <code>j purge &lt;number of messages&gt;</code>
+        <small>Default number of messages = 10</small>
+      </div>
+      <div class="filterDiv mod">
+        <h3>kick</h3>
+        <p>Kicks a user</p>
+        <code>j kick @user [Reason]</code>
+        <small>Reason is optional</small>
+      </div>
+      <div class="filterDiv mod">
+        <h3>ban</h3>
+        <p>Bans a user</p>
+        <code>j ban @user [Reason]</code>
+        <small>Reason is optional</small>
+      </div>
+      <div class="filterDiv mod">
+        <h3>unban</h3>
+        <p>Unbans a user</p>
+        <code>j unban @user</code>
+      </div>
+      <div class="filterDiv mod">
+        <h3>bans</h3>
+        <p>Shows a list of banned users</p>
+        <code>j bans</code>
+      </div>
+
+      <div class="filterDiv fun">
+        <h3>say</h3>
+        <p>Repeats what you say</p>
+        <code>j say &lt;text&gt;</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>8ball</h3>
+        <p>Ask a question, get a answer</p>
+        <code>j 8ball [question]</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>ghostping</h3>
+        <p>Use this command to ghostping a user</p>
+        <code>j ghostping @member &lt;number of times&gt;</code>
+        <small>Default number of times = 1</small>
+      </div>
+      <div class="filterDiv fun">
+        <h3>choose</h3>
+        <p>Use this command to make a choice</p>
+        <code>j choose [Option 1], [Option 2], [Option 3] .....</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>gay</h3>
+        <p>Calculates gay percentage of someone</p>
+        <code>j gay @user</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>ship</h3>
+        <p>Ships two users</p>
+        <code>j gay @user</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>drunkify</h3>
+        <p>Drunkifies a text by making alternate uppercase and lowercase</p>
+        <code>j drunkify [text]</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>age</h3>
+        <p>Gives you your age</p>
+        <code>j age [dd mm yyyy]</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>number</h3>
+        <p>Gives a fact about given number</p>
+        <code>j number [number] (or) j numberfact [number]</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>comic</h3>
+        <p>Gets a random comic from xkcd</p>
+        <code>j comic (or) j xkcd (or) j randomcomic</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>shrek</h3>
+        <p>Just run the command</p>
+        <code>j shrek</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>clap</h3>
+        <p>Inserts claps between sentences</p>
+        <code>j clap &lt;sentence&gt;</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>roll</h3>
+        <p>Rolls a number from 1 to 6</p>
+        <code>j roll (or) j dice</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>flip</h3>
+        <p>Flips a coin to give Heads or Tails</p>
+        <code>j flip (or) j coin</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>bb</h3>
+        <p>Bubble wrap, enjoy popping!</p>
+        <code>j bb (or) j bubblewrap</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>pp</h3>
+        <p>PP</p>
+        <code>j pp or j pp @user</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>sortinghat</h3>
+        <p>Sorts you into a Hogwarts House</p>
+        <code>j sortinghat</code>
+      </div>
+      <div class="filterDiv fun">
+        <h3>minesweeper</h3>
+        <p>Minesweeper game in discord</p>
+        <code>j minesweeper [columns] [rows] [bombs]</code>
+        <small>Columns, rows, bombs are optional</small>
+      </div>
+      <div class="filterDiv util">
+        <h3>ping</h3>
+        <p>Used to test, if the bot is working and gives latency</p>
+        <code>j ping</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>botinfo</h3>
+        <p>Gives Hosting details</p>
+        <code>j botinfo</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>serverinfo</h3>
+        <p>Gives information about the server the bot is in</p>
+        <code>j serverinfo</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>info</h3>
+        <p>To know more about JsM, and updates run this command</p>
+        <code>j info</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>timer</h3>
+        <p>Creates a timer (countdown), cannot go more than 10 minutes</p>
+        <code>j timer [number of seconds]</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>wiki</h3>
+        <p>Use this command to search wikipedia for any term</p>
+        <code>j wiki [term you want to search]</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>uptime</h3>
+        <p>Gives duration of bot being online since last activation</p>
+        <code>j uptime</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>invite</h3>
+        <p>Gives link to invite JsM to your other servers</p>
+        <code>j invite</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>userinfo</h3>
+        <p>Gives information about mentioned user</p>
+        <code>j userinfo @user</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>suggest</h3>
+        <p>Sends suggestion to the Creator of JsM</p>
+        <code>j suggest [suggestion]</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>rank</h3>
+        <p>Shows your or any other user's rank</p>
+        <code>j rank (or) j rank @user</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>translate</h3>
+        <p>Translates given text to chosen language</p>
+        <code>j translate [name of language] [text to translate]</code>
+      </div>
+      <div class="filterDiv util">
+        <h3>poll</h3>
+        <p>Creates a poll</p>
+        <code>j poll "question" choice1 choice2 choice3 ......</code>
+        <small>Make sure to write question in quotation marks</small>
+      </div>
+
+      <div class="filterDiv img">
+        <h3>aadhaar</h3>
+        <p>Gives user's aadhaar card</p>
+        <code>j aadhaar @user</code>
+      </div>
+      <div class="filterDiv img">
+        <h3>wanted</h3>
+        <p>Gives out a wanted poster for user</p>
+        <code>j wanted @user</code>
+      </div>
+      <div class="filterDiv img">
+        <h3>avatar</h3>
+        <p>Shows avatar of the user/someone else</p>
+        <code>j avatar @user</code>
+      </div>
+      <div class="filterDiv img">
+        <h3></h3>
+        <p>Returns a picture, of the item requested by user</p>
+        <code>j [item name]</code>
+      </div>
+      <div class="filterDiv img">
+        <h3>dog</h3>
+        <p>Returns a picture of a dog</p>
+        <code>j dog</code>
+      </div>
+
+      <div class="filterDiv music">
+        <h3>join</h3>
+        <p>Simply joins a voice channel, doesn't play anything</p>
+        <code>j join</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>summon</h3>
+        <p>Used to switch between voice channels</p>
+        <code>j summon</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>play</h3>
+        <p>Command used to play music</p>
+        <code>j play &lt;youtube url&gt;(or) j play [name of song]</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>leave</h3>
+        <p>Disconnects from the VC</p>
+        <code>j leave (or) j dc (or) j disconnect</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>syt</h3>
+        <p>Searches youtube and displays the first result</p>
+        <code>j syt &lt;search term&gt;</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>vol</h3>
+        <p>Controls volume of playback</p>
+        <code>j vol [Anything between 0 and 150]</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>now</h3>
+        <p>Shows current track which is playing</p>
+        <code>j now (or) j np (or) j playing (or) j current</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>pause</h3>
+        <p>Pauses the current playing music</p>
+        <code>j pause</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>resume</h3>
+        <p>Resumes currently paused music</p>
+        <code>j resume</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>stop</h3>
+        <p>Stops the bot from playing music</p>
+        <code>j stop</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>skip</h3>
+        <p>
+          Skips currently playing song and moves to the next one in the queue
+        </p>
+        <code>j skip</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>queue</h3>
+        <p>Shows the queue in which music is being played</p>
+        <code>j queue</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>shuffle</h3>
+        <p>Shuffles the songs in the queue</p>
+        <code>j shuffle</code>
+      </div>
+      <div class="filterDiv music">
+        <h3>remove</h3>
+        <p>Removes the song from queue for which index number is given</p>
+        <code>j remove [index number]</code>
+      </div>
+
+      <div class="filterDiv maths">
+        <h3>cal</h3>
+        <p>A simple calculator</p>
+        <code>j cal</code>
+      </div>
+      <div class="filterDiv maths">
+        <h3>sol</h3>
+        <p>
+          Solves/Gives output of your questions, can be mathematical or
+          geographical
+        </p>
+        <code>j sol 3x^2 2x -4 =0 (or) j sol what is momentum</code>
+      </div>
+      <div class="filterDiv maths">
+        <h3>quad</h3>
+        <p>Use this command to solve a quadratic equation</p>
+        <code>j quad 3x^2 + 4x + 3</code>
+      </div>
+      <div class="filterDiv maths">
+        <h3>ap</h3>
+        <p>Gives a term or sum of an arithmetic progression</p>
+        <code
+          >j ap term first_term common_difference nth_term<br />j ap sum
+          first_term common_difference nth_term</code
+        >
+      </div>
+      <div class="filterDiv maths">
+        <h3>gp</h3>
+        <p>Gives a term or sum of geometric progression</p>
+        <code
+          >j gp term first_term common_difference nth_term<br />j gp sum
+          first_term common_difference nth_term<br />j gp sum first_term
+          common_difference inf</code
+        >
+      </div>
+
+      <div class="filterDiv chem">
+        <h3>bal</h3>
+        <p>Used to balance a chemical equation</p>
+        <code
+          >j bal PCl5 + H2O = H3PO4 + HCl (or)<br />
+          j balance PCl5 + H2O = H3PO4 + HCl</code
+        >
+        <small>Note: Case Sensitive</small>
+      </div>
+      <div class="filterDiv chem">
+        <h3>elem</h3>
+        <p>Gives information about the Element</p>
+        <code>j elem H</code>
+        <small>Note: Case Sensitive</small>
+      </div>
+      <div class="filterDiv chem">
+        <h3>table</h3>
+        <p>Shows Periodic Table</p>
+        <code>j table</code>
+      </div>
+      <div class="filterDiv chem">
+        <h3>mass</h3>
+        <p>Gives Mass of the given element or compound</p>
+        <code>j mass Ag (or) j mass NaCl</code>
+        <small>Note: Case Sensitive</small>
+      </div>
+      <div class="filterDiv chem">
+        <h3>elname</h3>
+        <p>Gives IUPAC name of element with atomic number > 100</p>
+        <code>j elname 112 (or) j elname 235</code>
+      </div>
+      <div class="filterDiv chem">
+        <h3>combustion</h3>
+        <p>Gives equation of combustion of given hydrocarbon</p>
+        <code>j cbt C6H6 (or) j combustion CH4</code>
+        <small>Note: Case Sensitive</small>
+      </div>
+
+      <div class="filterDiv prog">
+        <h3>code</h3>
+        <p>Run this command to test your code.</p>
+        <code>j code [name of language] [code]</code>
+        <small
+          >Supported languages are python, java, c++, c#, c, ruby, kotlin,
+          swift</small
+        >
+      </div>
+      <div class="filterDiv prog">
+        <h3>proglangs</h3>
+        <p>It tells supported programming languages for the 'code' command</p>
+        <code>j proglangs</code>
+      </div>
+    </div>
+    <br />
+    <p>So what are you waiting for?</p>
+    <div class="mainbutton">
+      <div class="center">
+        <button class="button">
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
+            target="_blank"
+          >
+            <span class="material-icons md-36">send</span>
+            <p>Invite Me</p>
+          </a>
+        </button>
+      </div>
+    </div>
+    <!-- <footer>
+      <div></div>
+    </footer> -->
+    <script src="main.js"></script>
+  </body>
+</html>
