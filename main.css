@@ -7,7 +7,17 @@ body {
   font-family: "Poppins";
   color: white;
   margin: 40px 5vw 20px 5vw;
+  background-color: #2f0064;
+  background-color: #000000;
+  opacity: 1;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #000000 40px
+    ),
+    repeating-linear-gradient(#4c00b955, #4c00b9);
 }
+
 * {
   box-sizing: border-box;
 }
@@ -30,7 +40,8 @@ h1 {
   font-size: 80px;
   text-align: center;
   margin: 15px auto;
-  text-shadow: 0px 0px 40px #8c00ff;
+  text-shadow: 10px 0px 80px #8c00ff, 0px 10px 80px #8c00ff,
+    -10px 0px 80px #8c00ff, 0px -10px 80px #8c00ff;
 }
 h2 {
   margin-top: 20px;
@@ -69,6 +80,28 @@ a:active {
   --fontColorMain: #7354b3;
   --baseColor1: #d5beff;
   --baseColor2: #543d8f;
+}
+
+#loading {
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@keyframes loadoutro {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#terminal {
+  text-align: left;
+  font-family: "Courier New";
 }
 
 #maintitle {
@@ -162,14 +195,25 @@ a:active {
   width: 225px;
   margin: 10px auto 10px;
   transition: 0.4s;
+  box-shadow: 0px 10px 30px #000000;
 }
 .titlebg img:hover {
   animation-name: vibrate-1;
+  box-shadow: 0px 0px 50px #ffffff;
   animation-duration: 0.4s;
   animation-iteration-count: infinite;
   transition: 0.2s;
   border-radius: 75px;
   animation-delay: 0.1s;
+}
+body:hover .titlebg img:hover {
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #000000 40px
+    ),
+    repeating-linear-gradient(#4c00b955, #b2ff7e);
+  transition: 0.2s;
 }
 @keyframes vibrate-1 {
   0% {
@@ -214,24 +258,33 @@ a:active {
   border: none;
   outline: none;
   padding: 12px 16px 10px 16px;
-  background-color: #d5beff;
+  background-color: #34235f;
+  box-shadow: 0px 10px 20px #000000a2;
   cursor: pointer;
-  color: var(--fontColorMain);
   border-radius: 20px;
   height: 80px;
   transition: 0.5s;
   width: 140px;
-  box-shadow: 0px 10px 0px #34235f;
+  color: rgb(226, 182, 255);
   margin: 0px 5px;
   display: inline-block;
 }
 .button:hover {
+  background-color: #be9bff;
+  box-shadow: 0px 10px 20px #34235f;
   transition: 0.2s;
+  color: #5100ad;
   border-radius: 10px;
+}
+.button:active {
+  background-color: #742aff;
+  color: rgb(236, 209, 255);
+  transition: 0.2s;
 }
 
 .mySlides1,
-.mySlides2 {
+.mySlides2,
+.mySlides3 {
   display: none;
 }
 img {
@@ -239,24 +292,31 @@ img {
   border-radius: 20px;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 600px;
   position: relative;
   margin: auto;
   transition: 0.6s;
   border-radius: 20px;
+  box-shadow: 0px 20px 50px #0000008f;
 }
 .slideshow-container:hover {
-  box-shadow: 0px 20px 50px #7600e4;
+  box-shadow: 0px 20px 50px #e3c5ff83;
   transition: 0.2s;
 }
 .slideshow-container:hover .prev,
 .slideshow-container:hover .next {
   color: white;
 }
+.slideshow-container:hover .prev:hover,
+.slideshow-container:hover .next:hover {
+  color: #9e29ff;
+}
+.slideshow-container:hover .prev:active,
+.slideshow-container:hover .next:active {
+  color: var(--baseColor1);
+}
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -273,20 +333,22 @@ img {
   user-select: none;
   line-height: 0px;
 }
-.prev a span,
-.next a span {
-  position: absolute;
-}
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
 }
 
-/* On hover, add a grey background color */
 .prev:hover,
 .next:hover {
+  background-color: var(--baseColor1);
+  transition: 0.2s;
+}
+.prev:active,
+.next:active {
   background-color: #9e29ff;
+  transition: 0.2s;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px #0000006e;
 }
 
 .cmdselect {
@@ -341,6 +403,10 @@ button p {
   box-shadow: 0px 0px 0px var(--cmdBtnColorShadow);
   transition: 0.2s;
   background-color: var(--cmdBtnColorShadow);
+}
+#cmdbtn_grey {
+  --cmdBtnBg: #e0e0e0;
+  --cmdBtnColorShadow: #555555;
 }
 #cmdbtn_red {
   --cmdBtnBg: #ff9e9e;
@@ -402,10 +468,10 @@ button p {
   background-color: #d5beff;
   border-radius: 10px;
   color: var(--fontColorMain);
-  width: 46.5%;
+  width: 47%;
   height: 170px;
   text-align: center;
-  margin: 20px 1.75%;
+  margin: 20px 1.5%;
   padding: 10px auto;
   display: none;
   overflow-x: auto;
@@ -413,9 +479,40 @@ button p {
   transition: 0.5s;
 }
 .filterDiv:hover {
-  box-shadow: 0px 25px 20px #430b74;
+  cursor: pointer;
+  background-color: #d09eff;
+  box-shadow: 0px 10px 15px #430b74;
   transition: 0.2s;
 }
+/* .filterDiv h3 {
+  font-size: 30px;
+}
+.filterDiv p,
+.filterDiv small,
+.filterDiv code {
+  font-size: 0px;
+}
+.filterDiv:active {
+  height: 180px;
+  position: fixed;
+  box-shadow: 0px 25px 20px #430b74;
+  transition: 0.2s;
+  z-index: 3;
+  bottom: 50px;
+  left: 50px;
+}
+.filterDiv:active h3 {
+  font-size: 30px;
+}
+.filterDiv:active p {
+  font-size: 18px;
+}
+.filterDiv:active code {
+  font-size: 19px;
+}
+.filterDiv:active small {
+  font-size: 13.5px;
+} */
 .show {
   display: block;
 }

@@ -13,6 +13,9 @@
     />
   </head>
   <body>
+    <div id="loading">
+      <p id="terminal">Loading...</p>
+    </div>
     <div class="titlebg">
       <img
         src="assets/logoo.png"
@@ -30,33 +33,40 @@
 
     <div class="mainbutton">
       <div class="center">
-        <button class="button">
-          <a
-            href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
-            target="_blank"
-          >
+        <a
+          href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
+          target="_blank"
+        >
+          <button class="button">
             <span class="material-icons md-36">send</span>
             <p>Invite Me</p>
-          </a>
-        </button>
-        <button class="button">
-          <a href="https://top.gg/bot/870932828504866816" target="_blank">
+          </button>
+        </a>
+        <a href="https://top.gg/bot/870932828504866816" target="_blank">
+          <button class="button">
             <span class="material-icons md-36">open_in_new</span>
             <p>Top.gg</p>
-          </a>
-        </button>
-        <button class="button">
-          <a href="#cdmheader">
+          </button>
+        </a>
+        <a href="https://stats.uptimerobot.com/yzq6Bt722D" target="_blank">
+          <button class="button">
+            <span class="material-icons md-36">sensors</span>
+            <p>Uptime</p>
+          </button>
+        </a>
+        <a href="#cdmheader">
+          <button class="button">
             <span class="material-icons md-36">terminal</span>
             <p>Commands</p>
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </div>
     <br />
     <h2>Why JsM?</h2>
     <br />
     <p>Awesome and creative image commands!</p>
+    <br />
     <div class="slideshow-container">
       <div class="mySlides1">
         <img src="./assets/imgcmd1.png" style="width: 100%" />
@@ -79,6 +89,56 @@
     </div>
 
     <br />
+    <p>Music streaming support</p>
+    <br />
+
+    <div class="slideshow-container">
+      <div class="mySlides2">
+        <img src="./assets/musiccmd1.png" style="width: 100%" />
+      </div>
+      <div class="mySlides2">
+        <img src="./assets/musiccmd2.png" style="width: 100%" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1, 1)"
+        ><span class="material-icons md-48"> chevron_left </span></a
+      >
+      <a class="next" onclick="plusSlides(1, 1)"
+        ><span class="material-icons md-48"> chevron_right </span></a
+      >
+    </div>
+    <br />
+    <p>Best in class Maths and Chemistry assistant!</p>
+    <br />
+    <div class="slideshow-container">
+      <div class="mySlides3">
+        <img src="./assets/mathscmd1.png" style="width: 100%" />
+      </div>
+      <div class="mySlides3">
+        <img src="./assets/mathscmd2.png" style="width: 100%" />
+      </div>
+      <div class="mySlides3">
+        <img src="./assets/mathscmd3.png" style="width: 100%" />
+      </div>
+      <div class="mySlides3">
+        <img src="./assets/mathscmd4.png" style="width: 100%" />
+      </div>
+      <div class="mySlides3">
+        <img src="./assets/mathscmd5.png" style="width: 100%" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1, 2)"
+        ><span class="material-icons md-48"> chevron_left </span></a
+      >
+      <a class="next" onclick="plusSlides(1, 2)"
+        ><span class="material-icons md-48"> chevron_right </span></a
+      >
+    </div>
+    <br />
+    <p>Powerful code compiler with 8 languages!</p>
+    <br />
+
+    <br />
     <h2 id="cdmheader">Commands</h2>
     <br />
     <!-- Control buttons -->
@@ -86,23 +146,19 @@
       <button
         class="cmdbtn active"
         onclick="filterSelection('')"
-        id="cmdbtn_red"
+        id="cmdbtn_grey"
       >
         <span class="material-icons md-36"> apps </span>
         <p>All</p>
       </button>
-      <button
-        class="cmdbtn"
-        onclick="filterSelection('mod')"
-        id="cmdbtn_orange"
-      >
+      <button class="cmdbtn" onclick="filterSelection('mod')" id="cmdbtn_red">
         <span class="material-icons md-36">gavel</span>
         <p>Moderation</p>
       </button>
       <button
         class="cmdbtn"
         onclick="filterSelection('fun')"
-        id="cmdbtn_yellow"
+        id="cmdbtn_orange"
       >
         <span class="material-icons md-36">celebration</span>
         <p>Fun</p>
@@ -110,19 +166,19 @@
       <button
         class="cmdbtn"
         onclick="filterSelection('util')"
-        id="cmdbtn_green"
+        id="cmdbtn_yellow"
       >
         <span class="material-icons md-36">settings</span>
         <p>Utility</p>
       </button>
-      <button class="cmdbtn" onclick="filterSelection('img')" id="cmdbtn_teal">
+      <button class="cmdbtn" onclick="filterSelection('img')" id="cmdbtn_green">
         <span class="material-icons md-36">image</span>
         <p>Image</p>
       </button>
       <button
         class="cmdbtn"
         onclick="filterSelection('music')"
-        id="cmdbtn_cyan"
+        id="cmdbtn_teal"
       >
         <span class="material-icons md-36">music_note</span>
         <p>Music</p>
@@ -130,22 +186,26 @@
       <button
         class="cmdbtn"
         onclick="filterSelection('maths')"
-        id="cmdbtn_blue"
+        id="cmdbtn_cyan"
       >
         <span class="material-icons md-36">calculate</span>
         <p>Maths</p>
       </button>
-      <button
-        class="cmdbtn"
-        onclick="filterSelection('chem')"
-        id="cmdbtn_purple"
-      >
+      <button class="cmdbtn" onclick="filterSelection('chem')" id="cmdbtn_blue">
         <span class="material-icons md-36">science</span>
         <p>Chemistry</p>
       </button>
-      <button class="cmdbtn" onclick="filterSelection('prog')" id="cmdbtn_pink">
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('prog')"
+        id="cmdbtn_purple"
+      >
         <span class="material-icons md-36">code</span>
         <p>Programming</p>
+      </button>
+      <button class="cmdbtn" onclick="filterSelection('misc')" id="cmdbtn_pink">
+        <span class="material-icons md-36">add</span>
+        <p>Miscellaneous</p>
       </button>
     </div>
 
@@ -366,7 +426,7 @@
         <code>j avatar @user</code>
       </div>
       <div class="filterDiv img">
-        <h3></h3>
+        <h3>item</h3>
         <p>Returns a picture, of the item requested by user</p>
         <code>j [item name]</code>
       </div>
@@ -542,20 +602,18 @@
     <p>So what are you waiting for?</p>
     <div class="mainbutton">
       <div class="center">
-        <button class="button">
-          <a
-            href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
-            target="_blank"
-          >
+        <a
+          href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
+          target="_blank"
+        >
+          <button class="button">
             <span class="material-icons md-36">send</span>
             <p>Invite Me</p>
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </div>
-    <!-- <footer>
-      <div></div>
-    </footer> -->
+
     <script src="main.js"></script>
   </body>
 </html>

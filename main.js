@@ -47,12 +47,22 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-window.onload = function () {};
+window.onload = function () {
+  var loadscreen = document.getElementById("loading");
+  var outrodur = 1000;
+  loadscreen.style.animationName = "loadoutro";
+  loadscreen.style.animationDuration = `${outrodur / 1000}s`;
+  loadscreen.style.animationFillMode = "forwards";
+  setTimeout(() => {
+    loadscreen.style.visibility = "hidden";
+  }, outrodur);
+};
 
-var slideIndex = [1, 1];
-var slideId = ["mySlides1", "mySlides2"];
+var slideIndex = [1, 1, 1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"];
 showSlides(1, 0);
 showSlides(1, 1);
+showSlides(1, 2);
 
 function plusSlides(n, no) {
   showSlides((slideIndex[no] += n), no);
