@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="shortcut icon" type="image/jpg" href="./assets/logo.ico" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+    ></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -14,7 +18,7 @@
   </head>
   <body>
     <div id="loading">
-      <p id="terminal">Loading...</p>
+      <div id="console"></div>
     </div>
     <div class="titlebg">
       <img
@@ -30,6 +34,10 @@
       A powerful and multipurpose Discord bot
     </p>
     <br />
+
+    <button id="totop" onclick="scrollToTop()">
+      <span class="material-icons md-48"> expand_less </span>
+    </button>
 
     <div class="mainbutton">
       <div class="center">
@@ -65,79 +73,84 @@
     <br />
     <h2>Why JsM?</h2>
     <br />
-    <p>Awesome and creative image commands!</p>
-    <br />
-    <div class="slideshow-container">
-      <div class="mySlides1">
-        <img src="./assets/imgcmd1.png" style="width: 100%" />
-      </div>
+    <div class="imgsection">
+      <p>Awesome and creative image commands!</p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="./assets/imgcmd1.png" style="width: 100%" />
+        </div>
 
-      <div class="mySlides1">
-        <img src="./assets/imgcmd2.png" style="width: 100%" />
-      </div>
+        <div class="mySlides1">
+          <img src="./assets/imgcmd2.png" style="width: 100%" />
+        </div>
 
-      <div class="mySlides1">
-        <img src="./assets/imgcmd3.png" style="width: 100%" />
-      </div>
+        <div class="mySlides1">
+          <img src="./assets/imgcmd3.png" style="width: 100%" />
+        </div>
 
-      <a class="prev" onclick="plusSlides(-1, 0)"
-        ><span class="material-icons md-48"> chevron_left </span></a
-      >
-      <a class="next" onclick="plusSlides(1, 0)"
-        ><span class="material-icons md-48"> chevron_right </span></a
-      >
+        <a class="prev" onclick="plusSlides(-1, 0)"
+          ><span class="material-icons md-48"> chevron_left </span></a
+        >
+        <a class="next" onclick="plusSlides(1, 0)"
+          ><span class="material-icons md-48"> chevron_right </span></a
+        >
+      </div>
+      <br />
     </div>
 
-    <br />
-    <p>Music streaming support</p>
-    <br />
+    <div class="imgsection">
+      <p>Music streaming support</p>
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="./assets/musiccmd1.png" style="width: 100%" />
+        </div>
+        <div class="mySlides2">
+          <img src="./assets/musiccmd2.png" style="width: 100%" />
+        </div>
 
-    <div class="slideshow-container">
-      <div class="mySlides2">
-        <img src="./assets/musiccmd1.png" style="width: 100%" />
+        <a class="prev" onclick="plusSlides(-1, 1)"
+          ><span class="material-icons md-48"> chevron_left </span></a
+        >
+        <a class="next" onclick="plusSlides(1, 1)"
+          ><span class="material-icons md-48"> chevron_right </span></a
+        >
       </div>
-      <div class="mySlides2">
-        <img src="./assets/musiccmd2.png" style="width: 100%" />
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1, 1)"
-        ><span class="material-icons md-48"> chevron_left </span></a
-      >
-      <a class="next" onclick="plusSlides(1, 1)"
-        ><span class="material-icons md-48"> chevron_right </span></a
-      >
+      <br />
     </div>
-    <br />
-    <p>Best in class Maths and Chemistry assistant!</p>
-    <br />
-    <div class="slideshow-container">
-      <div class="mySlides3">
-        <img src="./assets/mathscmd1.png" style="width: 100%" />
-      </div>
-      <div class="mySlides3">
-        <img src="./assets/mathscmd2.png" style="width: 100%" />
-      </div>
-      <div class="mySlides3">
-        <img src="./assets/mathscmd3.png" style="width: 100%" />
-      </div>
-      <div class="mySlides3">
-        <img src="./assets/mathscmd4.png" style="width: 100%" />
-      </div>
-      <div class="mySlides3">
-        <img src="./assets/mathscmd5.png" style="width: 100%" />
-      </div>
+    <div class="imgsection">
+      <p>Best in class Maths and Chemistry assistant!</p>
+      <div class="slideshow-container">
+        <div class="mySlides3">
+          <img src="./assets/mathscmd1.png" style="width: 100%" />
+        </div>
+        <div class="mySlides3">
+          <img src="./assets/mathscmd2.png" style="width: 100%" />
+        </div>
+        <div class="mySlides3">
+          <img src="./assets/mathscmd3.png" style="width: 100%" />
+        </div>
+        <div class="mySlides3">
+          <img src="./assets/mathscmd4.png" style="width: 100%" />
+        </div>
+        <div class="mySlides3">
+          <img src="./assets/mathscmd5.png" style="width: 100%" />
+        </div>
 
-      <a class="prev" onclick="plusSlides(-1, 2)"
-        ><span class="material-icons md-48"> chevron_left </span></a
-      >
-      <a class="next" onclick="plusSlides(1, 2)"
-        ><span class="material-icons md-48"> chevron_right </span></a
-      >
+        <a class="prev" onclick="plusSlides(-1, 2)"
+          ><span class="material-icons md-48"> chevron_left </span></a
+        >
+        <a class="next" onclick="plusSlides(1, 2)"
+          ><span class="material-icons md-48"> chevron_right </span></a
+        >
+      </div>
+      <br />
     </div>
+    <!-- <div class="imgsection">
+      <p>Powerful code compiler with 8 languages!</p>
+    </div> -->
     <br />
-    <p>Powerful code compiler with 8 languages!</p>
     <br />
-
+    <br />
     <br />
     <h2 id="cdmheader">Commands</h2>
     <br />
@@ -613,7 +626,9 @@
         </a>
       </div>
     </div>
-
+    <footer>
+      <p>Bot by <b>jsmsj</b></p>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
