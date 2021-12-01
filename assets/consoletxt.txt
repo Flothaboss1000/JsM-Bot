@@ -3,7 +3,6 @@ $ cd JsM-Bot<br/><br/>
 <span id="a">jsmsj#5252@JsM-Bot</span> <span id="b">MINGW64</span> <span id="c">~/JsM-Bot</span>
 $ cat about_me.txt
 Developer: jsmsj#5252
-Site Developer: Flothaboss1000#4590
-Special Mention: jolo#6929<br/><br/>
+Site Developer: Flothaboss1000<br/><br/>
 <span id="a">jsmsj#5252@JsM-Bot</span> <span id="b">MINGW64</span> <span id="c">~/JsM-Bot</span>
 $ start index.html

@@ -103,6 +103,12 @@ a:active {
   margin-top: 100px;
   font-size: 14px;
   text-align: left;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 #console p {
   font-size: 14px;
@@ -338,7 +344,10 @@ body:hover .titlebg img:hover {
 
 .mySlides1,
 .mySlides2,
-.mySlides3 {
+.mySlides3,
+.mySlides4,
+.mySlides5,
+.mySlides6 {
   display: none;
 }
 img {
@@ -350,7 +359,7 @@ img {
   width: 29.5vw;
   display: inline;
   float: left;
-  height: 600px;
+  height: 400px;
   margin: auto;
 }
 
