@@ -54,8 +54,9 @@ h2 {
   width: 100%;
 }
 h3 {
-  font-size: 25px;
+  font-size: 20px;
   margin: 10px;
+  font-family: "Quicksand";
 }
 h4 {
   font-size: 25px;
@@ -559,6 +560,7 @@ button .cmdbtn + p {
   margin: 20px auto;
   overflow-x: hidden;
   transition: 0.2s;
+  font-size: 9px;
 }
 .container:hover {
   background-color: #852bce;
@@ -570,10 +572,10 @@ button .cmdbtn + p {
   background-color: #d5beff;
   border-radius: 25px;
   color: var(--fontColorMain);
-  width: 22%;
-  height: 170px;
+  width: 24%;
+  height: 140px;
   text-align: center;
-  margin: 20px 1.5%;
+  margin: 5px 0.5%;
   padding: 10px auto;
   display: none;
   overflow-x: hidden;
@@ -585,9 +587,19 @@ button .cmdbtn + p {
   border-radius: 10px;
   cursor: pointer;
   background-color: #d09eff;
-  box-shadow: 0px 10px 0px #430b74;
   transition: 0.2s;
-  transform: translateY(-10px);
+}
+.filterDiv p {
+  font-size: 12px;
+  line-height: 15px;
+}
+.filterDiv p .code,
+.filterDiv code {
+  font-size: 11px;
+  line-height: 0px;
+}
+.filterDiv small {
+  font-size: 10px;
 }
 
 .show {
@@ -627,7 +639,7 @@ footer p {
   transition: 0.2s;
 }
 
-@media (max-width: 2200px) {
+@media (min-width: 1800px) {
   /* .imgsection {
     width: 42vw;
     display: inline;
@@ -635,12 +647,22 @@ footer p {
     margin: auto;
   }  */
   .filterDiv {
-    width: 30%;
+    width: 19%;
   }
 }
-@media (max-width: 1800px) {
+@media (min-width: 2000px) {
   .filterDiv {
-    width: 47%;
+    width: 15.5%;
+  }
+}
+@media (min-width: 2200px) {
+  .filterDiv {
+    width: 13.25%;
+  }
+}
+@media (min-width: 2400px) {
+  .filterDiv {
+    width: 11.5%;
   }
 }
 @media (max-width: 1500px) {
@@ -651,6 +673,16 @@ footer p {
     height: fit-content;
     margin: auto;
   } */
+}
+@media (max-width: 1300px) {
+  .filterDiv {
+    width: 32%;
+  }
+}
+@media (max-width: 1000px) {
+  .filterDiv {
+    width: 48%;
+  }
 }
 @media screen and (max-width: 800px) {
   h1 {
@@ -690,7 +722,7 @@ footer p {
   .next .material-icons.md-48 {
     font-size: 28px;
   }
-  .cmdselect {
+  /* .cmdselect {
     height: 80px;
     border-radius: 20px;
   }
@@ -707,7 +739,7 @@ footer p {
   }
   .cmdbtn .material-icons.md-36 {
     font-size: 28px;
-  }
+  } */
   ::-webkit-scrollbar {
     height: 0;
   }
