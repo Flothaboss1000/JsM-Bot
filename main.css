@@ -54,7 +54,7 @@ h2 {
   width: 100%;
 }
 h3 {
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px;
 }
 h4 {
@@ -68,10 +68,13 @@ p {
   margin: 5px;
   text-align: center;
 }
-code {
+code,
+.code {
   background-color: rgb(40, 0, 63);
   color: #d5beff;
   font-size: 19px;
+  padding: 0 5px;
+  font-family: "Consolas";
 }
 small {
   display: block;
@@ -451,7 +454,7 @@ img {
   border-radius: 10px;
   padding: 10px;
   padding-top: 10px;
-  height: 110px;
+  height: 90px;
   overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
@@ -468,26 +471,26 @@ img {
 
 .cmdbtn {
   font-family: "Josefin Sans";
-  font-size: 20px;
   border: none;
   outline: none;
-  padding: 12px 16px 10px 16px;
+  padding: 8px 14px 10px 14px;
   background-color: var(--cmdBtnBg);
   cursor: pointer;
   color: var(--cmdBtnColorShadow);
-  border-radius: 20px;
-  height: 80px;
+  border-radius: 12.5px;
+  height: 55px;
   transition: 0.5s;
-  width: 140px;
+  width: 90px;
   box-shadow: 0px 10px 0px var(--cmdBtnColorShadow);
   margin: 0px 5px;
   display: inline-block;
+  font-size: 10px;
 }
-button p {
+button .cmdbtn + p {
   margin: 0px;
 }
 .cmdbtn:hover {
-  border-radius: 10px;
+  border-radius: 5px;
   filter: saturate(2);
   transition: 0.1s;
 }
@@ -499,6 +502,10 @@ button p {
   transition: 0.2s;
   background-color: var(--cmdBtnColorShadow);
 }
+.material-icons.md-36 {
+  font-size: 28px;
+}
+
 #cmdbtn_grey {
   --cmdBtnBg: #e0e0e0;
   --cmdBtnColorShadow: #555555;

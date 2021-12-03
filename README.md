@@ -1,7 +1,7 @@
-# Update 0.6.1
+# Update 0.6.2
 
-- Modified some command descriptions
-- Added README.md as an update board
+- Modified some more command descriptions
+- Resized the Command Categorizer
 
 # Upcoming
 
