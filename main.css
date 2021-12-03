@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Josefin+Sans:wght@500&family=Poiret+One&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Josefin+Sans:wght@500&family=Poiret+One&family=Poppins&family=Quicksand:wght@600&display=swap");
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   background-color: #190841;
@@ -55,6 +56,12 @@ h2 {
 h3 {
   font-size: 30px;
   margin: 10px;
+}
+h4 {
+  font-size: 25px;
+  font-family: "Quicksand";
+  display: block;
+  text-align: center;
 }
 p {
   font-size: 18px;
@@ -356,23 +363,40 @@ img {
 }
 
 .imgsection {
-  width: 29.5vw;
-  display: inline;
-  float: left;
-  height: 400px;
+  background-color: #944ad17a;
+  width: auto;
+  display: block;
+  height: 500px;
   margin: auto;
+  margin: 30px;
+  padding: 15px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.5s;
+  border-color: transparent transparent transparent #5b00c4;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.329);
+  border-width: 0 0 0 10px;
+  border-style: solid;
+  float: left;
+}
+.imgsection p {
+  display: flex;
+  text-align: justify;
+  float: left;
+  width: 50%;
 }
 
 .slideshow-container {
-  max-width: 600px;
+  max-width: 450px;
   position: relative;
   margin: auto;
   transition: 0.6s;
   border-radius: 20px;
-  box-shadow: 0px 20px 50px #0000008f;
+  box-shadow: 0px 20px 20px #00000065;
+  float: right;
 }
 .slideshow-container:hover {
-  box-shadow: 0px 20px 50px #e3c5ff83;
+  box-shadow: 0px 20px 40px #000000be;
   transition: 0.2s;
 }
 .slideshow-container:hover .prev,
@@ -394,8 +418,8 @@ img {
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
-  margin-top: -45px;
+  padding: 5px;
+  margin-top: -30px;
   color: rgba(255, 255, 255, 0.322);
   font-weight: bold;
   font-size: 18px;
@@ -518,7 +542,7 @@ button p {
 
 .container {
   overflow: scroll;
-  background-color: #1c0036;
+  background-color: #1c003696;
   border-radius: 25px;
   height: fit-content;
   max-height: 1000px;
@@ -530,7 +554,7 @@ button p {
   transition: 0.2s;
 }
 .container:hover {
-  background-color: #412b79;
+  background-color: #852bce;
   transition: 0.2s;
 }
 
@@ -597,13 +621,12 @@ footer p {
 }
 
 @media (max-width: 2200px) {
-  .imgsection {
+  /* .imgsection {
     width: 42vw;
     display: inline;
     float: left;
-    /* height: 600px; */
     margin: auto;
-  }
+  }  */
   .filterDiv {
     width: 30%;
   }
@@ -614,13 +637,13 @@ footer p {
   }
 }
 @media (max-width: 1500px) {
-  .imgsection {
+  /* .imgsection {
     width: 90vw;
     display: inline;
     float: left;
     height: fit-content;
     margin: auto;
-  }
+  } */
 }
 @media screen and (max-width: 800px) {
   h1 {

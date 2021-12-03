@@ -61,7 +61,6 @@ window.onload = function () {
   setTimeout(() => {
     window.scrollTo(0, 0);
   }, 1401);
-  //Note that the delay starts directly from the loading of the page and doesn't wait for the console to finish typing
 };
 
 //Get the button:
