@@ -1,4 +1,4 @@
 {
-  "title": "update 0.6.2",
-  "list": "+ Resized the commands"
+  "title": "Update 0.7.0",
+  "list": "+ Added Support button\n+ Added responsiveness to cards\n+ Added proper description in cards\n+ Improved responsiveness of commands\n# Slightly modified the UI of image carousels\n+ Added interactive server widget"
 }

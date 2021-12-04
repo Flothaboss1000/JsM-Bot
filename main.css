@@ -336,7 +336,7 @@ body:hover .titlebg img:hover {
   border-radius: 20px;
   height: 80px;
   transition: 0.5s;
-  width: 140px;
+  width: 130px;
   margin: 10px 5px;
   display: inline-block;
 }
@@ -367,18 +367,17 @@ img {
 }
 
 .imgsection {
-  background-color: #944ad17a;
-  width: auto;
+  background-color: #944ad152;
+  width: 47.5%;
   display: block;
   height: 500px;
-  margin: auto;
-  margin: 30px;
+  margin: 10px;
   padding: 15px;
   border-radius: 20px;
   position: relative;
   transition: 0.5s;
   border-color: transparent transparent transparent #5b00c4;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.329);
+  box-shadow: 0 20px 20px #00000054;
   border-width: 0 0 0 10px;
   border-style: solid;
   float: left;
@@ -386,8 +385,10 @@ img {
 .imgsection p {
   display: flex;
   text-align: justify;
-  float: left;
-  width: 50%;
+  /* float: left; */
+  width: 100%;
+  height: 100px;
+  font-size: 15px;
 }
 
 .slideshow-container {
@@ -396,11 +397,11 @@ img {
   margin: auto;
   transition: 0.6s;
   border-radius: 20px;
-  box-shadow: 0px 20px 20px #00000065;
-  float: right;
+  border: 5px solid #00000065;
 }
 .slideshow-container:hover {
-  box-shadow: 0px 20px 40px #000000be;
+  border: 0px solid #00000065;
+  box-shadow: 0px 15px 40px #000000be;
   transition: 0.2s;
 }
 .slideshow-container:hover .prev,
@@ -563,7 +564,7 @@ button .cmdbtn + p {
   font-size: 9px;
 }
 .container:hover {
-  background-color: #852bce;
+  background-color: #852bcead;
   transition: 0.2s;
 }
 
@@ -584,9 +585,9 @@ button .cmdbtn + p {
   vertical-align: middle;
 }
 .filterDiv:hover {
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 15px;
   background-color: #d09eff;
+  box-shadow: 0px 15px 10px #29024eb9;
   transition: 0.2s;
 }
 .filterDiv p {
@@ -612,14 +613,47 @@ footer {
   color: #61e7ff;
   border: 2px solid #61e7ff;
   position: relative;
-  font-family: "courier new";
   flex: 1 1 auto;
   border-radius: 15px;
   padding: 10px;
+  transition: 0.5s;
   box-shadow: 0px 10px 20px rgb(0, 51, 66);
 }
+footer:hover {
+  background-color: #004750;
+  border: 2px solid #61e7ff00;
+  box-shadow: 0px 20px 50px #003b46;
+  transition: 0.2s;
+}
 footer p {
-  font-size: 30px;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+table {
+  width: 100%;
+  margin: 10px;
+  height: fit-content;
+  text-align: left;
+}
+th {
+  border-radius: 10px;
+  margin: 2.5px;
+  color: #00d9e0;
+  height: 50px;
+}
+thead {
+  margin-bottom: 5px;
+}
+td {
+  border-radius: 10px;
+  height: 300px;
+  margin: 2.5px;
+  color: white;
+  vertical-align: top;
+  font-size: 0.8em;
 }
 
 ::-webkit-scrollbar {
@@ -640,14 +674,11 @@ footer p {
 }
 
 @media (min-width: 1800px) {
-  /* .imgsection {
-    width: 42vw;
-    display: inline;
-    float: left;
-    margin: auto;
-  }  */
   .filterDiv {
     width: 19%;
+  }
+  .imgsection {
+    width: 32%;
   }
 }
 @media (min-width: 2000px) {
@@ -665,23 +696,23 @@ footer p {
     width: 11.5%;
   }
 }
-@media (max-width: 1500px) {
-  /* .imgsection {
-    width: 90vw;
-    display: inline;
-    float: left;
-    height: fit-content;
-    margin: auto;
-  } */
-}
 @media (max-width: 1300px) {
   .filterDiv {
     width: 32%;
+  }
+  h4 {
+    font-size: 2vw;
   }
 }
 @media (max-width: 1000px) {
   .filterDiv {
     width: 48%;
+  }
+  .imgsection {
+    width: 100%;
+  }
+  h4 {
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -718,29 +749,23 @@ footer p {
     margin-top: -30px;
     color: rgba(255, 255, 255, 0.322);
   }
+  .imgsection {
+    height: fit-content;
+  }
+  .imgsection p {
+    display: block;
+    height: fit-content;
+  }
   .prev .material-icons.md-48,
   .next .material-icons.md-48 {
     font-size: 28px;
   }
-  /* .cmdselect {
-    height: 80px;
-    border-radius: 20px;
-  }
-  .cmdbtn {
-    height: 50px;
-    padding: 0;
-    width: 100px;
-  }
-  .cmdbtn p {
-    font-size: 12px;
-  }
-  .cmdbth:active {
-    transform: translateY(-2.5px);
-  }
-  .cmdbtn .material-icons.md-36 {
-    font-size: 28px;
-  } */
   ::-webkit-scrollbar {
     height: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  table {
+    font-size: 3vw;
   }
 }
