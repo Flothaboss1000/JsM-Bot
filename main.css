@@ -607,6 +607,10 @@ button .cmdbtn + p {
   display: block;
 }
 
+iframe {
+  border-radius: 10px;
+}
+
 footer {
   background-color: #002d33;
   height: fit-content;
@@ -751,6 +755,7 @@ td {
   }
   .imgsection {
     height: fit-content;
+    margin: 5px 0;
   }
   .imgsection p {
     display: block;
