@@ -1,4 +1,4 @@
 {
-  "title": "Update 0.7.1",
-  "list": "# Bug fixes"
+  "title": "Update 1.0.0",
+  "list": "+ Massive UI Change\n+ Added new background\n+ Improved and added new buttons\n+ Added console themed loading screen\n+ Added cards and description\n+ Added image carousels of bot commands\n# Updates commands list\n+ Added interactive server widget for support server\n+ Added footer\n+ Improved site responsiveness for all screens\n# Compiled all commands into a grid\n# Converted bookmarks for command category into a single command categorizer"
 }
