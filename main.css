@@ -378,7 +378,7 @@ img {
   transition: 0.5s;
   border-color: transparent transparent transparent #5b00c4;
   box-shadow: 0 20px 20px #00000054;
-  border-width: 0 0 0 10px;
+  border-width: 0 10px 0 10px;
   border-style: solid;
   float: left;
 }
@@ -554,7 +554,7 @@ button .cmdbtn + p {
   background-color: #1c003696;
   border-radius: 25px;
   height: fit-content;
-  max-height: 1000px;
+  max-height: 95vh;
   padding: 20px;
   width: 100%;
   display: inline-block;
@@ -635,6 +635,9 @@ footer p {
   text-align: center;
   margin: auto;
   width: 100%;
+}
+footer small {
+  text-align: center;
 }
 table {
   width: 100%;
@@ -756,6 +759,8 @@ td {
   .imgsection {
     height: fit-content;
     margin: 5px 0;
+    width: 99%;
+    border-width: 0 1%;
   }
   .imgsection p {
     display: block;

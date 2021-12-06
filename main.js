@@ -63,6 +63,13 @@ window.onload = function () {
   }, 1401);
 };
 
+fetch("./assets/update.json")
+  .then((e) => e.json())
+  .then((f) => {
+    g = f.title.replace("Update ", "Site Version ");
+    document.getElementById("ver").innerHTML = g;
+  });
+
 //Get the button:
 var mybutton = document.getElementById("totop");
 
