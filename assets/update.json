@@ -1,8 +1,4 @@
 {
-  "title": "Update 1.0.1",
-  "list": [
-    "# Modified Command Grid height to match the height of the client's screen",
-    "# Minor layout fixes",
-    "+ Added site version in the footer"
-  ]
+  "title": "Update 1.0.2",
+  "list": ["+ Added metatags"]
 }
