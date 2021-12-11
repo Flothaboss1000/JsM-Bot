@@ -615,19 +615,20 @@ footer {
   background-color: #002d33;
   height: fit-content;
   color: #61e7ff;
-  border: 2px solid #61e7ff;
+  border: 2px solid #00a5c2;
   position: relative;
   flex: 1 1 auto;
   border-radius: 15px;
   padding: 10px;
   transition: 0.5s;
-  box-shadow: 0px 10px 20px rgb(0, 51, 66);
 }
 footer:hover {
-  background-color: #004750;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.747);
+  background-color: #00535e;
   border: 2px solid #61e7ff00;
   box-shadow: 0px 20px 50px #003b46;
   transition: 0.2s;
+  transform: translateY(-5px);
 }
 footer p {
   font-size: 20px;
@@ -719,32 +720,33 @@ td {
     width: 100%;
   }
   h4 {
-    font-size: 25px;
+    font-size: 5vw;
   }
 }
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 15vw;
+    font-size: 10vw;
+  }
+  .imgsection p {
+    font-size: 12px;
   }
   .filterDiv {
     width: 100%;
     height: fit-content;
     padding-bottom: 10px;
   }
-  /* .mainbutton {
-    height: fit-content;
-    position: relative;
-    margin-bottom: 20px;
-    width: fit-content;
-    float: unset;
-    margin: 20px auto;
+  .slideshow-container {
+    border-radius: 20px;
   }
-  .center {
-    width: fit-content;
-  } */
+  .slideshow-container img {
+    border-radius: 15px;
+  }
   .button {
     margin: 10px auto;
     width: 100%;
+  }
+  .cmdbtn {
+    user-select: none;
   }
   .prev,
   .next {
