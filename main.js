@@ -84,7 +84,7 @@ window.onscroll = function () {
     navbar.style.top = "5px";
   } else {
     totop.style.bottom = "-100px";
-    navbar.style.top = "-100px";
+    navbar.style.top = "-150px";
   }
 };
 

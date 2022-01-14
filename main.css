@@ -260,7 +260,7 @@ a:active {
 
 #navbar {
   position: fixed;
-  top: -100px;
+  top: -150px;
   margin: 5px 2.5vw;
   width: 95vw;
   z-index: 75;
@@ -552,7 +552,7 @@ img {
   border-radius: 10px;
   padding: 10px;
   padding-top: 10px;
-  height: 90px;
+  height: 100px;
   overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
@@ -576,21 +576,25 @@ img {
   cursor: pointer;
   color: var(--cmdBtnColorShadow);
   border-radius: 12.5px;
-  height: 55px;
+  height: 65px;
   transition: 0.5s;
   width: 90px;
   box-shadow: 0px 10px 0px var(--cmdBtnColorShadow);
+  width: 70px;
   margin: 0px 5px;
   display: inline-block;
-  font-size: 10px;
+  font-size: 0px;
 }
 button .cmdbtn + p {
   margin: 0px;
 }
 .cmdbtn:hover {
+  width: 90px;
   border-radius: 5px;
   filter: saturate(2);
+  transform: translateY(-5px);
   transition: 0.1s;
+  font-size: 10px;
 }
 .cmdbtn:active {
   border-radius: 10px;
@@ -677,11 +681,11 @@ button .cmdbtn + p {
   height: 50px;
   text-align: left;
   margin: 5px 0.5%;
-  padding: 10px 20px;
   display: none;
   overflow-x: hidden;
   overflow-y: auto;
   transition: 0.5s;
+  overflow: hidden;
   vertical-align: middle;
 }
 .filterDiv:hover {
@@ -689,28 +693,56 @@ button .cmdbtn + p {
   background-color: #d09eff;
   box-shadow: 0px 15px 10px #29024eb9;
   transition: 0.2s;
+  height: 150px;
+  transition-delay: 1s;
 }
 .filterDiv p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 15px;
   text-align: left;
+  display: inline-block;
+  vertical-align: middle;
 }
 .filterDiv h3 {
-  margin: 5px;
+  display: inline-block;
+  padding: 5px 40px;
+  margin: 7.5px;
+  height: fit-content;
+  background-color: #ae75e4;
+  border-radius: 55px;
+  vertical-align: middle;
+  transition: 0.5s;
+  width: 225px;
+  font-size: 20px;
+  text-align: center;
+}
+.filterDiv:hover h3 {
+  transition: 0.2s;
+  transition-delay: 1s;
+  border-radius: 10px;
 }
 .filterDiv p .code,
 .filterDiv code {
-  font-size: 11px;
-  line-height: 0px;
+  margin: 10px;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
 }
 .filterDiv small {
-  font-size: 10px;
+  font-size: 15px;
+  color: rgb(238, 255, 140);
 }
-.filterDiv h3,
-.filterDiv p {
-  vertical-align: top;
-  display: inline-block;
-  margin-bottom: 20px;
+.filterDiv br {
+  height: 100px;
+}
+.filterDiv .more {
+  display: block;
+  background-color: #af86fa;
+  padding: 5px;
+  width: auto;
+  border-radius: 10px;
+  margin: 2.5px 10px;
+  height: 85px;
 }
 
 .show {
@@ -719,6 +751,8 @@ button .cmdbtn + p {
 
 iframe {
   border-radius: 10px;
+  margin: 2.5vw;
+  width: 95vw;
 }
 
 footer {
@@ -731,6 +765,8 @@ footer {
   border-radius: 15px;
   padding: 10px;
   transition: 0.5s;
+  margin: 2.5vw;
+  width: 95vw;
 }
 footer:hover {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.747);
@@ -837,6 +873,9 @@ td {
   h1 {
     font-size: 10vw;
   }
+  .navbutton {
+    visibility: hidden;
+  }
   .imgsection p {
     font-size: 12px;
   }
@@ -878,6 +917,15 @@ td {
     display: block;
     height: fit-content;
   }
+  .filterDiv {
+    height: auto;
+  }
+  .filterDiv h3 {
+    width: 95%;
+  }
+  .more {
+    height: fit-content;
+  }
   .prev .material-icons.md-48,
   .next .material-icons.md-48 {
     font-size: 28px;
@@ -889,5 +937,8 @@ td {
 @media screen and (max-width: 500px) {
   table {
     font-size: 3vw;
+  }
+  #navbar {
+    height: 70px;
   }
 }

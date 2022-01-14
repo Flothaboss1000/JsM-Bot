@@ -361,17 +361,11 @@
         class="cmdbtn active"
         onclick="filterSelection('')"
         id="cmdbtn_grey"
-        title="All"
       >
         <span class="material-icons md-36"> apps </span>
         <br />All
       </button>
-      <button
-        class="cmdbtn"
-        onclick="filterSelection('mod')"
-        id="cmdbtn_red"
-        title="Moderation"
-      >
+      <button class="cmdbtn" onclick="filterSelection('mod')" id="cmdbtn_red">
         <span class="material-icons md-36">gavel</span>
         <br />Moderation
       </button>
@@ -443,371 +437,500 @@
       <div class="filterDiv mod">
         <h3>mute</h3>
         <p>Mutes a user</p>
-        <code>j mute @user</code>
+        <div class="more">
+          <code>j mute @user</code>
+        </div>
       </div>
       <div class="filterDiv mod">
         <h3>unmute</h3>
         <p>Unmutes a user</p>
-        <code>j unmute @user</code>
+        <div class="more">
+          <code>j unmute @user</code>
+        </div>
       </div>
       <div class="filterDiv mod">
         <h3>purge</h3>
         <p>Clears messages</p>
-        <code>j purge &lt;number of messages&gt;</code>
-        <small>Default number of messages = 10</small>
+        <div class="more">
+          <code>j purge &lt;number of messages&gt;</code>
+          <small>Default number of messages = 10</small>
+        </div>
       </div>
       <div class="filterDiv mod">
         <h3>kick</h3>
         <p>Kicks a user</p>
-        <code>j kick @user [Reason]</code>
-        <small>Reason is optional</small>
+        <div class="more">
+          <code>j kick @user [Reason]</code>
+          <small>Reason is optional</small>
+        </div>
       </div>
       <div class="filterDiv mod">
         <h3>ban</h3>
         <p>Bans a user</p>
-        <code>j ban @user [Reason]</code>
-        <small>Reason is optional</small>
+        <div class="more">
+          <code>j ban @user [Reason]</code>
+          <small>Reason is optional</small>
+        </div>
       </div>
       <div class="filterDiv mod">
         <h3>unban</h3>
         <p>Unbans a user</p>
-        <code>j unban @user</code>
+        <div class="more">
+          <code>j unban @user</code>
+        </div>
       </div>
       <div class="filterDiv mod">
         <h3>bans</h3>
         <p>Shows a list of banned users</p>
-        <code>j bans</code>
+        <div class="more">
+          <code>j bans</code>
+        </div>
       </div>
 
       <div class="filterDiv fun">
         <h3>say</h3>
         <p>Repeats what you say</p>
-        <code>j say &lt;text&gt;</code>
+        <div class="more">
+          <code>j say &lt;text&gt;</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>8ball</h3>
         <p>Ask a question, get a answer</p>
-        <code>j 8ball [question]</code>
+        <div class="more">
+          <code>j 8ball [question]</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>ghostping</h3>
         <p>Use this command to ghostping a user</p>
-        <code>j ghostping @member &lt;number of times&gt;</code>
-        <small>Default number of times = 1</small>
+        <div class="more">
+          <code>j ghostping @member &lt;number of times&gt;</code>
+          <small>Default number of times = 1</small>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>choose</h3>
         <p>Use this command to make a choice</p>
-        <code>j choose [Option 1], [Option 2], [Option 3] .....</code>
+        <div class="more">
+          <code>j choose [Option 1], [Option 2], [Option 3] .....</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>gay</h3>
         <p>Calculates gay percentage of someone</p>
-        <code>j gay @user</code>
+        <div class="more">
+          <code>j gay @user</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>ship</h3>
         <p>Ships two users</p>
-        <code>j gay @user</code>
+        <div class="more">
+          <code>j gay @user</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>drunkify</h3>
         <p>Drunkifies a text by making alternate uppercase and lowercase</p>
-        <code>j drunkify [text]</code>
+        <div class="more">
+          <code>j drunkify [text]</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>age</h3>
         <p>Gives you your age</p>
-        <code>j age [dd mm yyyy]</code>
+        <div class="more">
+          <code>j age [dd mm yyyy]</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>number</h3>
         <p>Gives a fact about given number</p>
-        <p>
-          <span class="code">j number [number]</span> or
-          <span class="code">j numberfact [number]</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j number [number]</span> or
+            <span class="code">j numberfact [number]</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>comic</h3>
         <p>Gets a random comic from xkcd</p>
-        <p>
-          <span class="code">j comic</span> or
-          <span class="code">j xkcd</span> or
-          <span class="code">j randomcomic</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j comic</span> or
+            <span class="code">j xkcd</span> or
+            <span class="code">j randomcomic</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>shrek</h3>
         <p>Just run the command</p>
-        <code>j shrek</code>
+        <div class="more">
+          <code>j shrek</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>clap</h3>
         <p>Inserts claps between sentences</p>
-        <code>j clap &lt;sentence&gt;</code>
+        <div class="more">
+          <code>j clap &lt;sentence&gt;</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>roll</h3>
         <p>Rolls a number from 1 to 6</p>
-        <p>
-          <span class="code">j roll</span> or
-          <span class="code">j dice</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j roll</span> or
+            <span class="code">j dice</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>flip</h3>
         <p>Flips a coin to give Heads or Tails</p>
-        <p>
-          <span class="code">j flip</span> or
-          <span class="code">j coin</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j flip</span> or
+            <span class="code">j coin</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>bb</h3>
         <p>Bubble wrap, enjoy popping!</p>
-        <p>
-          <span class="code">j bb</span> or
-          <span class="code">j bubblewrap</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j bb</span> or
+            <span class="code">j bubblewrap</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>pp</h3>
         <p>PP</p>
-        <p>
-          <span class="code">j pp</span> or
-          <span class="code">j pp @user</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j pp</span> or
+            <span class="code">j pp @user</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>sortinghat</h3>
         <p>Sorts you into a Hogwarts House</p>
-        <code>j sortinghat</code>
+        <div class="more">
+          <code>j sortinghat</code>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>minesweeper</h3>
         <p>Minesweeper game in discord</p>
-        <code>j minesweeper [columns] [rows] [bombs]</code>
-        <small>Columns, rows, bombs are optional</small>
+        <div class="more">
+          <code>j minesweeper [columns] [rows] [bombs]</code>
+          <small>Columns, rows, bombs are optional</small>
+        </div>
       </div>
       <div class="filterDiv fun">
         <h3>urban</h3>
         <p>Find the 'best' definition to your words</p>
-        <code>j urban (argument)<br />j urban XD</code>
+        <div class="more">
+          <code>j urban (argument)<br />j urban XD</code>
+        </div>
       </div>
 
       <div class="filterDiv util">
         <h3>ping</h3>
         <p>Used to test, if the bot is working and gives latency</p>
-        <code>j ping</code>
+        <div class="more">
+          <code>j ping</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>botinfo</h3>
         <p>Gives Hosting details</p>
-        <code>j botinfo</code>
+        <div class="more">
+          <code>j botinfo</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>serverinfo</h3>
         <p>Gives information about the server the bot is in</p>
-        <code>j serverinfo</code>
+        <div class="more">
+          <code>j serverinfo</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>info</h3>
         <p>To know more about JsM, and updates run this command</p>
-        <code>j info</code>
+        <div class="more">
+          <code>j info</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>timer</h3>
         <p>Creates a timer (countdown), cannot go more than 10 minutes</p>
-        <code>j timer [number of seconds]</code>
+        <div class="more">
+          <code>j timer [number of seconds]</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>wiki</h3>
         <p>Use this command to search wikipedia for any term</p>
-        <code>j wiki [term you want to search]</code>
+        <div class="more">
+          <code>j wiki [term you want to search]</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>uptime</h3>
         <p>Gives duration of bot being online since last activation</p>
-        <code>j uptime</code>
+        <div class="more">
+          <code>j uptime</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>invite</h3>
         <p>Gives link to invite JsM to your other servers</p>
-        <code>j invite</code>
+        <div class="more">
+          <code>j invite</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>userinfo</h3>
         <p>Gives information about mentioned user</p>
-        <code>j userinfo @user</code>
+        <div class="more">
+          <code>j userinfo @user</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>suggest</h3>
         <p>Sends suggestion to the Creator of JsM</p>
-        <code>j suggest [suggestion]</code>
+        <div class="more">
+          <code>j suggest [suggestion]</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>rank</h3>
         <p>Shows your or any other user's rank</p>
-        <p>
-          <span class="code">j rank</span> or
-          <span class="code">j rank @user</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j rank</span> or
+            <span class="code">j rank @user</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>translate</h3>
         <p>Translates given text to chosen language</p>
-        <code>j translate [name of language] [text to translate]</code>
+        <div class="more">
+          <code>j translate [name of language] [text to translate]</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>poll</h3>
         <p>Creates a poll</p>
-        <code>j poll "question" choice1 choice2 choice3 ......</code>
-        <small>Make sure to write question in quotation marks</small>
+        <div class="more">
+          <code>j poll "question" choice1 choice2 choice3 ......</code>
+          <small>Make sure to write question in quotation marks</small>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>define</h3>
         <p>Gives meaning, synonyms and antonyms of given word</p>
-        <code>j define (word)<br />j define break out</code>
+        <div class="more">
+          <code>j define (word)<br />j define break out</code>
+        </div>
       </div>
       <div class="filterDiv util">
         <h3>vote</h3>
         <p>Vote for the bot on Top.gg</p>
-        <code>j vote</code>
-        <small>Voting unlocks exclusive commands and reduces cooldown</small>
+        <div class="more">
+          <code>j vote</code>
+          <small>Voting unlocks exclusive commands and reduces cooldown</small>
+        </div>
       </div>
 
       <div class="filterDiv img">
         <h3>aadhaar</h3>
         <p>Gives user's aadhaar card</p>
-        <code>j aadhaar @user</code>
+        <div class="more">
+          <code>j aadhaar @user</code>
+        </div>
       </div>
       <div class="filterDiv img">
         <h3>wanted</h3>
         <p>Gives out a wanted poster for user</p>
-        <code>j wanted @user</code>
+        <div class="more">
+          <code>j wanted @user</code>
+        </div>
       </div>
       <div class="filterDiv img">
         <h3>avatar</h3>
         <p>Shows avatar of the user/someone else</p>
-        <code>j avatar @user</code>
+        <div class="more">
+          <code>j avatar @user</code>
+        </div>
       </div>
       <div class="filterDiv img">
         <h3>item</h3>
         <p>Returns a picture, of the item requested by user</p>
-        <code>j [item name]</code>
+        <div class="more">
+          <code>j [item name]</code>
+        </div>
       </div>
       <div class="filterDiv img">
         <h3>dog</h3>
         <p>Posts a random picture of a dog</p>
-        <code>j dog</code>
+        <div class="more">
+          <code>j dog</code>
+        </div>
       </div>
       <div class="filterDiv img">
         <h3>coffee</h3>
         <p>Posts a random picture of coffee</p>
-        <code>j coffee</code>
+        <div class="more">
+          <code>j coffee</code>
+        </div>
       </div>
       <div class="filterDiv img">
         <h3>duck</h3>
         <p>Posts a random picture of a duck</p>
-        <code>j duck</code>
+        <div class="more">
+          <code>j duck</code>
+        </div>
       </div>
 
       <div class="filterDiv music">
         <h3>join</h3>
         <p>Simply joins a voice channel, doesn't play anything</p>
-        <code>j join</code>
+        <div class="more">
+          <code>j join</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>summon</h3>
         <p>Used to switch between voice channels</p>
-        <code>j summon</code>
+        <div class="more">
+          <code>j summon</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>play</h3>
         <p>Command used to play music</p>
-        <p>
-          <span class="code">j play &lt;youtube url&gt;</span> or
-          <span class="code">j play [name of song]</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j play &lt;youtube url&gt;</span> or
+            <span class="code">j play [name of song]</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>leave</h3>
         <p>Disconnects from the VC</p>
-        <p>
-          <span class="code">j leave</span> or <span class="code">j dc</span> or
-          <span class="code">j disconnect</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j leave</span> or
+            <span class="code">j dc</span> or
+            <span class="code">j disconnect</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>syt</h3>
         <p>Searches youtube and displays the first result</p>
-        <code>j syt &lt;search term&gt;</code>
+        <div class="more">
+          <code>j syt &lt;search term&gt;</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>vol</h3>
         <p>Controls volume of playback</p>
-        <code>j vol [Anything between 0 and 150]</code>
+        <div class="more">
+          <code>j vol [Anything between 0 and 150]</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>now</h3>
         <p>Shows current track which is playing</p>
-        <p>
-          <span class="code">j now</span> or <span class="code">j np</span> or
-          <span class="code">j playing</span> or
-          <span class="code">j current</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j now</span> or <span class="code">j np</span> or
+            <span class="code">j playing</span> or
+            <span class="code">j current</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>pause</h3>
         <p>Pauses the current playing music</p>
-        <code>j pause</code>
+        <div class="more">
+          <code>j pause</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>resume</h3>
         <p>Resumes currently paused music</p>
-        <code>j resume</code>
+        <div class="more">
+          <code>j resume</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>stop</h3>
         <p>Stops the bot from playing music</p>
-        <code>j stop</code>
+        <div class="more">
+          <code>j stop</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>skip</h3>
         <p>
           Skips currently playing song and moves to the next one in the queue
         </p>
-        <code>j skip</code>
+        <div class="more">
+          <code>j skip</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>queue</h3>
         <p>Shows the queue in which music is being played</p>
-        <code>j queue</code>
+        <div class="more">
+          <code>j queue</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>shuffle</h3>
         <p>Shuffles the songs in the queue</p>
-        <code>j shuffle</code>
+        <div class="more">
+          <code>j shuffle</code>
+        </div>
       </div>
       <div class="filterDiv music">
         <h3>remove</h3>
         <p>Removes the song from queue for which index number is given</p>
-        <code>j remove [index number]</code>
+        <div class="more">
+          <code>j remove [index number]</code>
+        </div>
       </div>
 
       <div class="filterDiv maths">
         <h3>cal</h3>
         <p>A simple calculator</p>
-        <code>j cal</code>
+        <div class="more">
+          <code>j cal</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>c</h3>
         <p>Performs simple calculations</p>
-        <p>
-          <span class="code">j c 5+8</span> or
-          <span class="code">j c (18^5)-89</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j c 5+8</span> or
+            <span class="code">j c (18^5)-89</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>wolf</h3>
@@ -815,42 +938,54 @@
           Solves/Gives output of your questions, can be mathematical or
           geographical
         </p>
-        <p>
-          <span class="code">j wolf 3x^2 2x -4 =0</span> or
-          <span class="code">j wolf what is momentum</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j wolf 3x^2 2x -4 =0</span> or
+            <span class="code">j wolf what is momentum</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>quad</h3>
         <p>Use this command to solve a quadratic equation</p>
-        <code>j quad 3x^2 + 4x + 3</code>
+        <div class="more">
+          <code>j quad 3x^2 + 4x + 3</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>ap</h3>
         <p>Gives a term or sum of an arithmetic progression</p>
-        <code
-          >j ap term first_term common_difference nth_term<br />j ap sum
-          first_term common_difference nth_term</code
-        >
+        <div class="more">
+          <code
+            >j ap term first_term common_difference nth_term<br />j ap sum
+            first_term common_difference nth_term</code
+          >
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>gp</h3>
         <p>Gives a term or sum of geometric progression</p>
-        <code
-          >j gp term first_term common_difference nth_term<br />j gp sum
-          first_term common_difference nth_term<br />j gp sum first_term
-          common_difference inf</code
-        >
+        <div class="more">
+          <code
+            >j gp term first_term common_difference nth_term<br />j gp sum
+            first_term common_difference nth_term<br />j gp sum first_term
+            common_difference inf</code
+          >
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>2var</h3>
         <p>Linear equation in two variables</p>
-        <code>j 2var eqn1 ; eqn2<br />j 2var 2x+5y-20 ; 3x+6y-12</code>
+        <div class="more">
+          <code>j 2var eqn1 ; eqn2<br />j 2var 2x+5y-20 ; 3x+6y-12</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>display</h3>
         <p>Displays the given equation in image format</p>
-        <code>j display expression<br />j display 5x^2+4x-1</code>
+        <div class="more">
+          <code>j display expression<br />j display 5x^2+4x-1</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>limit</h3>
@@ -858,20 +993,26 @@
           Calculates limit of the given expression, (for infinite, you can write
           oo or -oo)
         </p>
-        <code
-          >j limit expression [limiting value of x]<br />j limit
-          sin(pi*cos^2(x))/x^2 0<br />j limit (3x^2+2x)/4x^2+3) oo</code
-        >
+        <div class="more">
+          <code
+            >j limit expression [limiting value of x]<br />j limit
+            sin(pi*cos^2(x))/x^2 0<br />j limit (3x^2+2x)/4x^2+3) oo</code
+          >
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>differentiate</h3>
         <p>Differentiates given expression</p>
-        <code>j derivative expression<br />j differentiate cos(x)</code>
+        <div class="more">
+          <code>j derivative expression<br />j differentiate cos(x)</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>integrate</h3>
         <p>Integrates given expression</p>
-        <code>j integrate expression<br />j integrate sin(x)</code>
+        <div class="more">
+          <code>j integrate expression<br />j integrate sin(x)</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>solve</h3>
@@ -879,243 +1020,312 @@
           Solves the given equation. Domain is by default, Complex. Make sure
           equation has =0 at end
         </p>
-        <code
-          >j solve equation domain<br />j solve 5x^3+3x^2+1-9x=0 real<br />j
-          solve x^3-1=0 complex<br />j solve x^2+x+1=0</code
-        >
+        <div class="more">
+          <code
+            >j solve equation domain<br />j solve 5x^3+3x^2+1-9x=0 real<br />j
+            solve x^3-1=0 complex<br />j solve x^2+x+1=0</code
+          >
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>expand</h3>
         <p>Expands the given expression</p>
-        <code>j expand expression<br />j expand (x-1)(x+2)(x+3)</code>
+        <div class="more">
+          <code>j expand expression<br />j expand (x-1)(x+2)(x+3)</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>factorise</h3>
         <p>Factorises the given expression</p>
-        <code>j factor expression<br />j factorise x^3+6x^2+11x+6</code>
+        <div class="more">
+          <code>j factor expression<br />j factorise x^3+6x^2+11x+6</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>simplify</h3>
         <p>Simplifies given fraction or expression</p>
-        <code
-          >j simplify expression<br />j simplify (x^3+6x^2+11x+6)/(x+1)</code
-        >
+        <div class="more">
+          <code
+            >j simplify expression<br />j simplify (x^3+6x^2+11x+6)/(x+1)</code
+          >
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>average</h3>
         <p>Get mean of given set of numbers, separated by space</p>
-        <code
-          >j average num1 num2 num3 num4 .....<br />j average 156 15 15 616 1 51
-          15</code
-        >
+        <div class="more">
+          <code
+            >j average num1 num2 num3 num4 .....<br />j average 156 15 15 616 1
+            51 15</code
+          >
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>problemid</h3>
         <p>Shows a list of supported problem ids</p>
-        <code>j problemid</code>
+        <div class="more">
+          <code>j problemid</code>
+        </div>
       </div>
       <div class="filterDiv maths">
         <h3>problem</h3>
         <p>Get a random question and answer for the given problem id</p>
-        <code>j problem &lt;problemid&gt;<br />j problem 11</code>
-        <small>To know which problem ids are supported run 'j problemid'</small>
+        <div class="more">
+          <code>j problem &lt;problemid&gt;<br />j problem 11</code>
+          <small
+            >To know which problem ids are supported run 'j problemid'</small
+          >
+        </div>
       </div>
 
       <div class="filterDiv chem">
         <h3>bal</h3>
         <p>Used to balance a chemical equation</p>
-        <p>
-          <span class="code">j bal PCl5 + H2O = H3PO4 + HCl</span> or <br />
-          <span class="code">j balance PCl5 + H2O = H3PO4 + HCl</span>
-        </p>
-        <small>Note: Case Sensitive</small>
+        <div class="more">
+          <p>
+            <span class="code">j bal PCl5 + H2O = H3PO4 + HCl</span> or <br />
+            <span class="code">j balance PCl5 + H2O = H3PO4 + HCl</span>
+          </p>
+          <small>Note: Case Sensitive</small>
+        </div>
       </div>
       <div class="filterDiv chem">
         <h3>elem</h3>
         <p>Gives information about the Element</p>
-        <code>j elem H</code>
-        <small>Note: Case Sensitive</small>
+        <div class="more">
+          <code>j elem H</code>
+          <small>Note: Case Sensitive</small>
+        </div>
       </div>
       <div class="filterDiv chem">
         <h3>table</h3>
         <p>Shows Periodic Table</p>
-        <code>j table</code>
+        <div class="more">
+          <code>j table</code>
+        </div>
       </div>
       <div class="filterDiv chem">
         <h3>mass</h3>
         <p>Gives Mass of the given element or compound</p>
-        <p>
-          <span class="code">j mass Ag</span> or
-          <span class="code">j mass NaCl</span>
-        </p>
-        <small>Note: Case Sensitive</small>
+        <div class="more">
+          <p>
+            <span class="code">j mass Ag</span> or
+            <span class="code">j mass NaCl</span>
+          </p>
+          <small>Note: Case Sensitive</small>
+        </div>
       </div>
       <div class="filterDiv chem">
         <h3>elname</h3>
         <p>Gives IUPAC name of element with atomic number > 100</p>
-        <p>
-          <span class="code">j elname 112</span> or
-          <span class="code">j elname 235</span>
-        </p>
+        <div class="more">
+          <p>
+            <span class="code">j elname 112</span> or
+            <span class="code">j elname 235</span>
+          </p>
+        </div>
       </div>
       <div class="filterDiv chem">
         <h3>combustion</h3>
         <p>Gives equation of combustion of given hydrocarbon</p>
-        <p>
-          <span class="code">j cbt C6B6</span> or
-          <span class="code">j combustion CH4</span>
-        </p>
-        <small>Note: Case Sensitive</small>
+        <div class="more">
+          <p>
+            <span class="code">j cbt C6B6</span> or
+            <span class="code">j combustion CH4</span>
+          </p>
+          <small>Note: Case Sensitive</small>
+        </div>
       </div>
       <div class="filterDiv chem">
         <h3>searchname</h3>
         <p>Search for a Compound by its name</p>
-        <code
-          >Search for a Compound by its name<br />j searchname
-          o-nitrophenol</code
-        >
+        <div class="more">
+          <code
+            >Search for a Compound by its name<br />j searchname
+            o-nitrophenol</code
+          >
+        </div>
       </div>
       <div class="filterDiv chem">
         <h3>searchformula</h3>
         <p>Search for a Compound by its name</p>
-        <code
-          >j searchformula compound_formula<br />j searchformula C6H5NO2</code
-        >
+        <div class="more">
+          <code
+            >j searchformula compound_formula<br />j searchformula C6H5NO2</code
+          >
+        </div>
       </div>
 
       <div class="filterDiv prog">
         <h3>code</h3>
         <p>Run this command to test your code.</p>
-        <code>j code [name of language] [code]</code>
-        <small
-          >Supported languages are python, java, c++, c#, c, ruby, kotlin,
-          swift</small
-        >
+        <div class="more">
+          <code>j code [name of language] [code]</code>
+          <small
+            >Supported languages are python, java, c++, c#, c, ruby, kotlin,
+            swift</small
+          >
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>proglangs</h3>
         <p>It tells supported programming languages for the 'code' command</p>
-        <code>j proglangs</code>
+        <div class="more">
+          <code>j proglangs</code>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>encode_base32</h3>
         <p>Converts given binary data to a radix-32 representation</p>
-        <code>j e,b32 (phrase)<br />j e,base32 hello world</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j e,b32 (phrase)<br />j e,base32 hello world</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>decode_base32</h3>
         <p>Translates a given radix-32 representation back into binary data</p>
-        <code
-          >j d,d32 (encoded_phrase)<br />j d,base32
-          NBSWY3DPEB3W64TMMQ======</code
-        >
-        <small>Text file is supported</small>
+        <div class="more">
+          <code
+            >j d,d32 (encoded_phrase)<br />j d,base32
+            NBSWY3DPEB3W64TMMQ======</code
+          >
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>encode_base64</h3>
         <p>Converts given binary data to a radix-64 representation</p>
-        <code>j e,b64 (phrase)<br />j e,base64 hello world</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j e,b64 (phrase)<br />j e,base64 hello world</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>decode_base64</h3>
         <p>Translates a given radix-64 representation back into binary data</p>
-        <code>j d,d64 (encoded_phrase)<br />j d,base64 aGVsbG8gd29ybGQ=</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j d,d64 (encoded_phrase)<br />j d,base64 aGVsbG8gd29ybGQ=</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>encode_rot13</h3>
         <p>Converts given binary data to a ROT13 Caesar Cipher</p>
-        <code>j e,r13 (phrase)<br />j e,rot13 hello world</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j e,r13 (phrase)<br />j e,rot13 hello world</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>decode_rot13</h3>
         <p>Translates a given ROT13 Caesar Cipher back into binary data</p>
-        <code>j d,r13 (encoded_phrase)<br />j d,rot13 uryyb jbeyq</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j d,r13 (encoded_phrase)<br />j d,rot13 uryyb jbeyq</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>encode_hex</h3>
         <p>Converts given binary data to a hexadecimal representation</p>
-        <code>j e,hex (phrase)<br />j e,hex hello world</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j e,hex (phrase)<br />j e,hex hello world</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>decode_hex</h3>
         <p>
           Translates a given hexadecimal representation back into binary data
         </p>
-        <code
-          >j d,hex (encoded_phrase)<br />j d,hex 68656C6C6F20776F726C64</code
-        >
-        <small>Text file is supported</small>
+        <div class="more">
+          <code
+            >j d,hex (encoded_phrase)<br />j d,hex 68656C6C6F20776F726C64</code
+          >
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>encode_ascii85</h3>
         <p>Converts given binary data to a radix-85 representation</p>
-        <code>j e,a85 (phrase)<br />j e,ascii85 hello world</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j e,a85 (phrase)<br />j e,ascii85 hello world</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>decode_ascii85</h3>
         <p>Translates a given radix-85 representation back into binary data</p>
-        <code>j d,a85 (encoded_phrase)<br />j d,ascii85 BOu!rD]j7BEbo7</code>
-        <small>Text file is supported</small>
+        <div class="more">
+          <code>j d,a85 (encoded_phrase)<br />j d,ascii85 BOu!rD]j7BEbo7</code>
+          <small>Text file is supported</small>
+        </div>
       </div>
       <div class="filterDiv prog">
         <h3>password</h3>
-        <p>
-          Generates a random password string for you.This returns a random
-          URL-safe text string, containing n bytes random bytes
-        </p>
-        <code>j password [number]</code>
-        <p>
-          <span class="code">j password 16</span> or
-          <span class="code">j password</span>
-        </p>
-        <small
-          >on average each byte results in approximately 1.3 characters</small
-        >
+        <p>Generates a random URL-safe text string, containing n bytes</p>
+        <div class="more">
+          <code>j password [number]</code>
+          <p>
+            <span class="code">j password 16</span> or
+            <span class="code">j password</span>
+          </p>
+          <small
+            >on average each byte results in approximately 1.3 characters</small
+          >
+        </div>
       </div>
 
       <div class="filterDiv misc">
         <h3>locate</h3>
         <p>Gives latitude and longitude for the given location</p>
-        <code>j locate [name of place]</code>
+        <div class="more">
+          <code>j locate [name of place]</code>
+        </div>
       </div>
       <div class="filterDiv misc">
         <h3>convert</h3>
         <p>Convert one denomination to another.</p>
-        <code>j convert (amount) (from) (to)<br />j convert 1 usd myr</code>
-        <small>Run 'j curcodes' to know currency shortforms</small>
+        <div class="more">
+          <code>j convert (amount) (from) (to)<br />j convert 1 usd myr</code>
+          <small>Run 'j curcodes' to know currency shortforms</small>
+        </div>
       </div>
       <div class="filterDiv misc">
         <h3>curcodes</h3>
         <p>List of short-form of currency codes you can use in 'j convert'</p>
-        <code>j curcodes</code>
+        <div class="more">
+          <code>j curcodes</code>
+        </div>
       </div>
       <div class="filterDiv misc">
         <h3>quote</h3>
         <p>Gives a random quotation</p>
-        <code>j quote</code>
+        <div class="more">
+          <code>j quote</code>
+        </div>
       </div>
       <div class="filterDiv misc">
         <h3>advice</h3>
         <p>Gives a random advice</p>
-        <code>j advice</code>
+        <div class="more">
+          <code>j advice</code>
+        </div>
       </div>
       <div class="filterDiv misc">
         <h3>covid</h3>
         <p>Covid-19 Statistics for any country</p>
-        <code>j covid (country name)<br />>j covid malaysia</code>
+        <div class="more">
+          <code>j covid (country name)<br />j covid malaysia</code>
+        </div>
       </div>
       <div class="filterDiv misc">
         <h3>locked</h3>
         <p>Gives a list of locked commands</p>
-        <code>j locked</code>
-        <small>To unlock these commands, vote for the bot on Top.gg</small>
+        <div class="more">
+          <code>j locked</code>
+          <small>To unlock these commands, vote for the bot on Top.gg</small>
+        </div>
       </div>
     </div>
     <br />
