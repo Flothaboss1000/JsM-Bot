@@ -71,7 +71,8 @@ fetch("./assets/update.json")
   });
 
 //Get the button:
-var mybutton = document.getElementById("totop");
+var totop = document.getElementById("totop");
+var navbar = document.getElementById("navbar");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -79,9 +80,11 @@ window.onscroll = function () {
     document.body.scrollTop > 590 ||
     document.documentElement.scrollTop > 590
   ) {
-    mybutton.style.bottom = "20px";
+    totop.style.bottom = "20px";
+    navbar.style.top = "5px";
   } else {
-    mybutton.style.bottom = "-100px";
+    totop.style.bottom = "-100px";
+    navbar.style.top = "-100px";
   }
 };
 
