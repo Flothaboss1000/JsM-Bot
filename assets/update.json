@@ -1,12 +1,7 @@
 {
-  "title": "Update 1.1.0",
+  "title": "Update 1.1.1",
   "list": [
-    "+ Added API category",
-    "+ Added more commands in multiple categories",
-    "+ Added removable clarification on command syntax at start of command list",
-    "+ Improved adjustability of the commands category selector",
-    "- Removed most of the inconsistencies in the commands' syntax",
-    "# Converted the commands' grid to a commands' list",
-    "# Slightly modified the site background"
+    "+ Increased contrast of the elements in the commands list",
+    "# Fixed the command category selector"
   ]
 }

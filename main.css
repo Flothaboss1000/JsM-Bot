@@ -561,7 +561,7 @@ img {
   max-width: 100%;
   scrollbar-width: 0px;
   transition: 0.2s;
-  margin: 20px 5vw;
+  margin: 20px auto;
   max-width: 90vw;
 }
 .cmdselect:hover {
@@ -748,6 +748,7 @@ button .cmdbtn + p {
   white-space: nowrap;
   overflow: hidden;
   margin-left: 20px;
+  color: rgb(44, 0, 80);
 }
 .filterDiv:hover p {
   max-width: 100%;
@@ -765,6 +766,7 @@ button .cmdbtn + p {
   width: 225px;
   font-size: 20px;
   text-align: center;
+  color: rgb(57, 0, 80);
 }
 .filterDiv:hover h3 {
   transition: 0.2s;
@@ -935,6 +937,9 @@ td {
     margin: 5px 0;
     width: 99%;
     border-width: 0 1%;
+  }
+  .cmdselect {
+    width: 90vw;
   }
   .imgsection p {
     display: block;
