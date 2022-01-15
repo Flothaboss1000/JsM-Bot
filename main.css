@@ -260,6 +260,7 @@ a:active {
 
 #navbar {
   position: fixed;
+  visibility: hidden;
   top: -150px;
   margin: 5px 2.5vw;
   width: 95vw;
@@ -333,7 +334,7 @@ a:active {
   margin: 0px 5px;
   line-height: 0;
   position: relative;
-  top: 7.5px;
+  top: 8px;
   float: right;
 }
 .navbutton:hover {
@@ -560,7 +561,8 @@ img {
   max-width: 100%;
   scrollbar-width: 0px;
   transition: 0.2s;
-  margin: 20px auto;
+  margin: 20px 5vw;
+  max-width: 90vw;
 }
 .cmdselect:hover {
   background-color: #45345f;
@@ -658,7 +660,7 @@ button .cmdbtn + p {
   background-color: #1c003696;
   border-radius: 25px;
   height: fit-content;
-  max-height: 95vh;
+  max-height: 80vh;
   padding: 20px;
   width: 90vw;
   display: inline-block;
@@ -671,6 +673,45 @@ button .cmdbtn + p {
   background-color: #852bcead;
   transition: 0.2s;
 }
+#alert {
+  background-color: #e4e47f;
+  color: #8f911f;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 20px;
+  width: 60%;
+  height: fit-content;
+  margin: 5px 20% 40px 20%;
+}
+#alert p {
+  font-size: 19px;
+  position: relative;
+  vertical-align: middle;
+}
+#iconalert {
+  background-color: rgb(212, 212, 93);
+  padding: 9px;
+  border-radius: 30px;
+  position: relative;
+  display: inline-block;
+}
+#alert button {
+  background-color: #ff9e9e;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: "Josefin Sans";
+  width: 50px;
+  height: 30px;
+  color: #8d0000;
+}
+#alert button:hover {
+  background-color: #8d0000;
+  color: #ff9e9e;
+  transition: 0.2s;
+}
 
 .filterDiv {
   float: left;
@@ -678,7 +719,7 @@ button .cmdbtn + p {
   border-radius: 25px;
   color: var(--fontColorMain);
   width: 100%;
-  height: 50px;
+  max-height: 50px;
   text-align: left;
   margin: 5px 0.5%;
   display: none;
@@ -693,15 +734,24 @@ button .cmdbtn + p {
   background-color: #d09eff;
   box-shadow: 0px 15px 10px #29024eb9;
   transition: 0.2s;
-  height: 150px;
+  max-height: 500px;
   transition-delay: 1s;
 }
 .filterDiv p {
   font-size: 17px;
   line-height: 15px;
+  max-width: 60%;
   text-align: left;
   display: inline-block;
   vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 20px;
+}
+.filterDiv:hover p {
+  max-width: 100%;
+  transition-delay: 1s;
 }
 .filterDiv h3 {
   display: inline-block;
@@ -720,6 +770,7 @@ button .cmdbtn + p {
   transition: 0.2s;
   transition-delay: 1s;
   border-radius: 10px;
+  margin-right: 98%;
 }
 .filterDiv p .code,
 .filterDiv code {
@@ -741,8 +792,9 @@ button .cmdbtn + p {
   padding: 5px;
   width: auto;
   border-radius: 10px;
-  margin: 2.5px 10px;
-  height: 85px;
+  margin: 10px 10px;
+  height: fit-content;
+  text-align: center;
 }
 
 .show {
@@ -827,48 +879,24 @@ td {
   transition: 0.2s;
 }
 
-/* @media (min-width: 1800px) {
-  .filterDiv {
-    width: 19%;
-  }
+@media (min-width: 1800px) {
   .imgsection {
     width: 32%;
   }
 }
-@media (min-width: 2000px) {
-  .filterDiv {
-    width: 15.5%;
-  }
-}
-@media (min-width: 2200px) {
-  .filterDiv {
-    width: 13.25%;
-  }
-}
-@media (min-width: 2400px) {
-  .filterDiv {
-    width: 11.5%;
-  }
-}
 @media (max-width: 1300px) {
-  .filterDiv {
-    width: 32%;
-  }
   h4 {
     font-size: 2vw;
   }
 }
 @media (max-width: 1000px) {
-  .filterDiv {
-    width: 48%;
-  }
   .imgsection {
     width: 100%;
   }
   h4 {
     font-size: 5vw;
   }
-} */
+}
 @media screen and (max-width: 800px) {
   h1 {
     font-size: 10vw;
@@ -879,11 +907,6 @@ td {
   .imgsection p {
     font-size: 12px;
   }
-  .filterDiv {
-    width: 100%;
-    height: fit-content;
-    padding-bottom: 10px;
-  }
   .slideshow-container {
     border-radius: 20px;
   }
@@ -891,8 +914,8 @@ td {
     border-radius: 15px;
   }
   .button {
-    margin: 10px auto;
-    width: 100%;
+    margin: 10px 5vw;
+    width: 90vw;
   }
   .cmdbtn {
     user-select: none;
@@ -917,13 +940,34 @@ td {
     display: block;
     height: fit-content;
   }
+  #alert {
+    height: fit-content;
+    margin: 10px 2.5px 40px 2.5px;
+    width: 100%;
+  }
+  #alert p {
+    font-size: 13px;
+  }
   .filterDiv {
+    height: fit-content;
+    padding-bottom: 10px;
     height: auto;
+    max-width: unset;
+    border-radius: 15px;
+  }
+  .filterDiv:hover {
+    height: auto;
+    transition-delay: 0s;
+  }
+  .filterDiv p {
+    max-width: 100%;
+    text-align: center;
   }
   .filterDiv h3 {
     width: 95%;
+    border-radius: 10px;
   }
-  .more {
+  .filterDiv .more {
     height: fit-content;
   }
   .prev .material-icons.md-48,

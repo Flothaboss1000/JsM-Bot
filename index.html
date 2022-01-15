@@ -434,6 +434,16 @@
     <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
 
     <div class="container">
+      <div id="alert">
+        <span class="material-icons md-36" id="iconalert">warning_amber</span>
+        <p>
+          &lt;&gt; means the field is required, [] means the field is optional
+        </p>
+        <button onclick="document.getElementById('alert').remove()">
+          Close
+        </button>
+      </div>
+
       <div class="filterDiv mod">
         <h3>mute</h3>
         <p>Mutes a user</p>
@@ -460,7 +470,7 @@
         <h3>kick</h3>
         <p>Kicks a user</p>
         <div class="more">
-          <code>j kick @user [Reason]</code>
+          <code>j kick @user [reason]</code>
           <small>Reason is optional</small>
         </div>
       </div>
@@ -468,7 +478,7 @@
         <h3>ban</h3>
         <p>Bans a user</p>
         <div class="more">
-          <code>j ban @user [Reason]</code>
+          <code>j ban @user [reason]</code>
           <small>Reason is optional</small>
         </div>
       </div>
@@ -513,7 +523,7 @@
         <h3>choose</h3>
         <p>Use this command to make a choice</p>
         <div class="more">
-          <code>j choose [Option 1], [Option 2], [Option 3] .....</code>
+          <code>j choose [option 1], [option 2], [option 3] .....</code>
         </div>
       </div>
       <div class="filterDiv fun">
@@ -638,7 +648,21 @@
         <h3>urban</h3>
         <p>Find the 'best' definition to your words</p>
         <div class="more">
-          <code>j urban (argument)<br />j urban XD</code>
+          <code>j urban &lt;argument&gt;<br />j urban XD</code>
+        </div>
+      </div>
+      <div class="filterDiv fun">
+        <h3>meme</h3>
+        <p>Get a meme</p>
+        <div class="more">
+          <code>j meme</code>
+        </div>
+      </div>
+      <div class="filterDiv fun">
+        <h3>hack</h3>
+        <p>Hack a discord user</p>
+        <div class="more">
+          <code>j hack @user</code>
         </div>
       </div>
 
@@ -741,7 +765,7 @@
         <h3>define</h3>
         <p>Gives meaning, synonyms and antonyms of given word</p>
         <div class="more">
-          <code>j define (word)<br />j define break out</code>
+          <code>j define &lt;word&gt;<br />j define break out</code>
         </div>
       </div>
       <div class="filterDiv util">
@@ -750,6 +774,14 @@
         <div class="more">
           <code>j vote</code>
           <small>Voting unlocks exclusive commands and reduces cooldown</small>
+        </div>
+      </div>
+      <div class="filterDiv util">
+        <h3>whois</h3>
+        <p>Get user details from user's ID</p>
+        <div class="more">
+          <code>j whois &lt;user_id&gt;</code>
+          <code>j whois 713276935064649792</code>
         </div>
       </div>
 
@@ -914,6 +946,13 @@
           <code>j remove [index number]</code>
         </div>
       </div>
+      <div class="filterDiv music">
+        <h3>lyrics</h3>
+        <p>Get lyrics of a song</p>
+        <div class="more">
+          <code>j lyrics &lt;name of song&gt;<br />j lyrics senorita</code>
+        </div>
+      </div>
 
       <div class="filterDiv maths">
         <h3>cal</h3>
@@ -957,8 +996,9 @@
         <p>Gives a term or sum of an arithmetic progression</p>
         <div class="more">
           <code
-            >j ap term first_term common_difference nth_term<br />j ap sum
-            first_term common_difference nth_term</code
+            >j ap &lt;term&gt; &lt;first_term common_difference&gt;
+            &lt;nth_term&gt;<br />j ap &lt;sum&gt; &lt;first_term
+            common_difference&gt; &lt;nth_term&gt;</code
           >
         </div>
       </div>
@@ -967,9 +1007,10 @@
         <p>Gives a term or sum of geometric progression</p>
         <div class="more">
           <code
-            >j gp term first_term common_difference nth_term<br />j gp sum
-            first_term common_difference nth_term<br />j gp sum first_term
-            common_difference inf</code
+            >j gp &lt;term&gt; &lt;first_term common_difference&gt;
+            &lt;nth_term&gt;<br />j gp &lt;sum&gt; &lt;first_term&gt;
+            &lt;common_difference&gt; &lt;nth_term&gt;<br />j gp &lt;sum&gt;
+            &lt;first_term&gt; &lt;common_difference&gt; inf</code
           >
         </div>
       </div>
@@ -977,68 +1018,73 @@
         <h3>2var</h3>
         <p>Linear equation in two variables</p>
         <div class="more">
-          <code>j 2var eqn1 ; eqn2<br />j 2var 2x+5y-20 ; 3x+6y-12</code>
+          <code
+            >j 2var &lt;eqn1&gt; ; &lt;eqn2&gt;<br />j 2var 2x+5y-20 ;
+            3x+6y-12</code
+          >
         </div>
       </div>
       <div class="filterDiv maths">
         <h3>display</h3>
         <p>Displays the given equation in image format</p>
         <div class="more">
-          <code>j display expression<br />j display 5x^2+4x-1</code>
+          <code>j display &lt;expression&gt;<br />j display 5x^2+4x-1</code>
         </div>
       </div>
       <div class="filterDiv maths">
         <h3>limit</h3>
-        <p>
-          Calculates limit of the given expression, (for infinite, you can write
-          oo or -oo)
-        </p>
+        <p>Calculates limit of the given expression</p>
         <div class="more">
           <code
-            >j limit expression [limiting value of x]<br />j limit
+            >j limit &lt;expression&gt; [limiting value of x]<br />j limit
             sin(pi*cos^2(x))/x^2 0<br />j limit (3x^2+2x)/4x^2+3) oo</code
           >
+          <small>For infinite, you can write oo or -oo</small>
         </div>
       </div>
       <div class="filterDiv maths">
         <h3>differentiate</h3>
         <p>Differentiates given expression</p>
         <div class="more">
-          <code>j derivative expression<br />j differentiate cos(x)</code>
+          <code
+            >j derivative &lt;expression&gt;<br />j differentiate cos(x)</code
+          >
         </div>
       </div>
       <div class="filterDiv maths">
         <h3>integrate</h3>
         <p>Integrates given expression</p>
         <div class="more">
-          <code>j integrate expression<br />j integrate sin(x)</code>
+          <code>j integrate &lt;expression&gt;<br />j integrate sin(x)</code>
         </div>
       </div>
       <div class="filterDiv maths">
         <h3>solve</h3>
-        <p>
-          Solves the given equation. Domain is by default, Complex. Make sure
-          equation has =0 at end
-        </p>
+        <p>Solves the given equation. Domain is by default, complex.</p>
         <div class="more">
-          <code
-            >j solve equation domain<br />j solve 5x^3+3x^2+1-9x=0 real<br />j
-            solve x^3-1=0 complex<br />j solve x^2+x+1=0</code
-          >
+          <p>
+            <span class="code">j solve &lt;equation&gt; [domain]</span><br />
+            <span class="code">j solve 5x^3+3x^2+1-9x=0 real</span> or
+            <span class="code">j solve x^3-1=0 complex</span> or
+            <span class="code">j solve x^2+x+1=0</span>
+          </p>
+          <small>Make sure equation has =0 at end</small>
         </div>
       </div>
       <div class="filterDiv maths">
         <h3>expand</h3>
         <p>Expands the given expression</p>
         <div class="more">
-          <code>j expand expression<br />j expand (x-1)(x+2)(x+3)</code>
+          <code>j expand &lt;expression&gt;<br />j expand (x-1)(x+2)(x+3)</code>
         </div>
       </div>
       <div class="filterDiv maths">
         <h3>factorise</h3>
         <p>Factorises the given expression</p>
         <div class="more">
-          <code>j factor expression<br />j factorise x^3+6x^2+11x+6</code>
+          <code
+            >j factor &lt;expression&gt;<br />j factorise x^3+6x^2+11x+6</code
+          >
         </div>
       </div>
       <div class="filterDiv maths">
@@ -1046,7 +1092,8 @@
         <p>Simplifies given fraction or expression</p>
         <div class="more">
           <code
-            >j simplify expression<br />j simplify (x^3+6x^2+11x+6)/(x+1)</code
+            >j simplify &lt;expression&gt;<br />j simplify
+            (x^3+6x^2+11x+6)/(x+1)</code
           >
         </div>
       </div>
@@ -1055,8 +1102,8 @@
         <p>Get mean of given set of numbers, separated by space</p>
         <div class="more">
           <code
-            >j average num1 num2 num3 num4 .....<br />j average 156 15 15 616 1
-            51 15</code
+            >j average &lt;num1&gt; &lt;num2&gt; [num3] [num4] .....<br />j
+            average 156 15 15 616 1 51 15</code
           >
         </div>
       </div>
@@ -1141,7 +1188,7 @@
         <p>Search for a Compound by its name</p>
         <div class="more">
           <code
-            >Search for a Compound by its name<br />j searchname
+            >j searchname &lt;compound_formula&gt;<br />j searchname
             o-nitrophenol</code
           >
         </div>
@@ -1151,14 +1198,15 @@
         <p>Search for a Compound by its name</p>
         <div class="more">
           <code
-            >j searchformula compound_formula<br />j searchformula C6H5NO2</code
+            >j searchformula &lt;compound_formula&gt;<br />j searchformula
+            C6H5NO2</code
           >
         </div>
       </div>
 
       <div class="filterDiv prog">
         <h3>code</h3>
-        <p>Run this command to test your code.</p>
+        <p>Run this command to test your code</p>
         <div class="more">
           <code>j code [name of language] [code]</code>
           <small
@@ -1178,7 +1226,7 @@
         <h3>encode_base32</h3>
         <p>Converts given binary data to a radix-32 representation</p>
         <div class="more">
-          <code>j e,b32 (phrase)<br />j e,base32 hello world</code>
+          <code>j e,b32 &lt;phrase&gt;<br />j e,base32 hello world</code>
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1187,7 +1235,7 @@
         <p>Translates a given radix-32 representation back into binary data</p>
         <div class="more">
           <code
-            >j d,d32 (encoded_phrase)<br />j d,base32
+            >j d,d32 &lt;encoded_phrase&gt;<br />j d,base32
             NBSWY3DPEB3W64TMMQ======</code
           >
           <small>Text file is supported</small>
@@ -1197,7 +1245,7 @@
         <h3>encode_base64</h3>
         <p>Converts given binary data to a radix-64 representation</p>
         <div class="more">
-          <code>j e,b64 (phrase)<br />j e,base64 hello world</code>
+          <code>j e,b64 &lt;phrase&gt;<br />j e,base64 hello world</code>
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1205,7 +1253,10 @@
         <h3>decode_base64</h3>
         <p>Translates a given radix-64 representation back into binary data</p>
         <div class="more">
-          <code>j d,d64 (encoded_phrase)<br />j d,base64 aGVsbG8gd29ybGQ=</code>
+          <code
+            >j d,d64 &lt;encoded_phrase&gt;<br />j d,base64
+            aGVsbG8gd29ybGQ=</code
+          >
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1213,7 +1264,7 @@
         <h3>encode_rot13</h3>
         <p>Converts given binary data to a ROT13 Caesar Cipher</p>
         <div class="more">
-          <code>j e,r13 (phrase)<br />j e,rot13 hello world</code>
+          <code>j e,r13 &lt;phrase&gt;<br />j e,rot13 hello world</code>
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1221,7 +1272,7 @@
         <h3>decode_rot13</h3>
         <p>Translates a given ROT13 Caesar Cipher back into binary data</p>
         <div class="more">
-          <code>j d,r13 (encoded_phrase)<br />j d,rot13 uryyb jbeyq</code>
+          <code>j d,r13 &lt;encoded_phrase&gt;<br />j d,rot13 uryyb jbeyq</code>
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1229,7 +1280,7 @@
         <h3>encode_hex</h3>
         <p>Converts given binary data to a hexadecimal representation</p>
         <div class="more">
-          <code>j e,hex (phrase)<br />j e,hex hello world</code>
+          <code>j e,hex &lt;phrase&gt;<br />j e,hex hello world</code>
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1240,7 +1291,8 @@
         </p>
         <div class="more">
           <code
-            >j d,hex (encoded_phrase)<br />j d,hex 68656C6C6F20776F726C64</code
+            >j d,hex &lt;encoded_phrase&gt;<br />j d,hex
+            68656C6C6F20776F726C64</code
           >
           <small>Text file is supported</small>
         </div>
@@ -1249,7 +1301,7 @@
         <h3>encode_ascii85</h3>
         <p>Converts given binary data to a radix-85 representation</p>
         <div class="more">
-          <code>j e,a85 (phrase)<br />j e,ascii85 hello world</code>
+          <code>j e,a85 &lt;phrase&gt;<br />j e,ascii85 hello world</code>
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1257,7 +1309,10 @@
         <h3>decode_ascii85</h3>
         <p>Translates a given radix-85 representation back into binary data</p>
         <div class="more">
-          <code>j d,a85 (encoded_phrase)<br />j d,ascii85 BOu!rD]j7BEbo7</code>
+          <code
+            >j d,a85 &lt;encoded_phrase&gt;<br />j d,ascii85
+            BOu!rD]j7BEbo7</code
+          >
           <small>Text file is supported</small>
         </div>
       </div>
@@ -1275,6 +1330,134 @@
           >
         </div>
       </div>
+      <div class="filterDiv prog">
+        <h3>stackoverflow</h3>
+        <p>Search for your query on stackoverflow through discord</p>
+        <div class="more">
+          <code
+            >j stackoverflow &lt;query&gt;<br />j stackoverflow loops in a
+            list</code
+          >
+        </div>
+      </div>
+      <div class="filterDiv prog">
+        <h3>morse</h3>
+        <p>Translate text to morse or morse to text</p>
+        <div class="more">
+          <code>j morse &lt;text&gt;</code>
+          <p>
+            <span class="code">j morse hello</span> or
+            <span class="code">j morse .... . .-.. .-.. ---</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="filterDiv api">
+        <h3>agify</h3>
+        <p>Calculates age based on the name given</p>
+        <div class="more">
+          <p>
+            <span class="code">j agify &lt;name&gt;</span> or
+            <span class="code">j agify alex</span>
+          </p>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>food</h3>
+        <p>Get a random image of food</p>
+        <div class="more">
+          <code>j food</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>sky</h3>
+        <p>Shows an AI generated night sky</p>
+        <div class="more">
+          <code>j sky</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>beach</h3>
+        <p>Shows an AI generated beach</p>
+        <div class="more">
+          <code>j beach</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>wojak</h3>
+        <p>Shows an AI generated wojak</p>
+        <div class="more">
+          <code>j wojak</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>story</h3>
+        <p>Shows an AI generated story</p>
+        <div class="more">
+          <code>j story</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>surreal</h3>
+        <p>Shows an AI generated image</p>
+        <div class="more">
+          <code>j surreal</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>kanye</h3>
+        <p>Gets a random Kanye West quote</p>
+        <div class="more">
+          <code>j kanye</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>rhyme</h3>
+        <p>Gets possible spellings of give word</p>
+        <div class="more">
+          <code
+            >j spelling &lt;word&gt;<br />
+            j spelling miscellanous</code
+          >
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>spelling</h3>
+        <p>Gets a word which rhymes with given word</p>
+        <div class="more">
+          <code
+            >j rhyme &lt;word&gt;<br />
+            j rhyme work</code
+          >
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>fakeuser</h3>
+        <p>Gets a fake user with random data</p>
+        <div class="more">
+          <code>j fakeuser</code>
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>ip</h3>
+        <p>Trace an ip to its location</p>
+        <div class="more">
+          <code
+            >j ip &lt;IP address&gt;<br />
+            j ip 103.104.69.15</code
+          >
+        </div>
+      </div>
+      <div class="filterDiv api">
+        <h3>qr</h3>
+        <p>Generates a QR code based on text/link given</p>
+        <div class="more">
+          <code
+            >j qr &lt;text/link&gt;<br />
+            j qr https://www.google.com</code
+          >
+        </div>
+      </div>
 
       <div class="filterDiv misc">
         <h3>locate</h3>
@@ -1285,9 +1468,12 @@
       </div>
       <div class="filterDiv misc">
         <h3>convert</h3>
-        <p>Convert one denomination to another.</p>
+        <p>Convert one denomination to another</p>
         <div class="more">
-          <code>j convert (amount) (from) (to)<br />j convert 1 usd myr</code>
+          <code
+            >j convert &lt;amount&gt; &lt;from&gt; &lt;to&gt;<br />j convert 1
+            usd myr</code
+          >
           <small>Run 'j curcodes' to know currency shortforms</small>
         </div>
       </div>
@@ -1316,7 +1502,14 @@
         <h3>covid</h3>
         <p>Covid-19 Statistics for any country</p>
         <div class="more">
-          <code>j covid (country name)<br />j covid malaysia</code>
+          <code>j covid &ltcountry name;&gt;<br />j covid malaysia</code>
+        </div>
+      </div>
+      <div class="filterDiv misc">
+        <h3>bots</h3>
+        <p>Get top bots</p>
+        <div class="more">
+          <code>j bots</code>
         </div>
       </div>
       <div class="filterDiv misc">
