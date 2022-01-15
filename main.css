@@ -967,6 +967,10 @@ td {
   .filterDiv p {
     max-width: 100%;
     text-align: center;
+    white-space: unset;
+    text-overflow: unset;
+    overflow: auto;
+    text-align: left;
   }
   .filterDiv h3 {
     width: 95%;
