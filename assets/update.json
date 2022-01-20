@@ -1,15 +1,9 @@
 {
-  "title": "Update 1.2.0",
+  "title": "Update 1.2.1",
   "list": [
-    "+ Added announcement banner",
-    "+ Added new site background",
-    "+ Added 'Skip Loading' button at the loading page",
-    "+ Added 'Statistics' button",
-    "+ Added commands list columns",
-    "+ Added changelog page of the bot",
-    "# Modified site background",
-    "# Modified the UI of commands list a bit",
-    "# Modified bot and server invite links",
-    "# Fixed some layout bugs"
+    "+ Improved mobile support",
+    "# Resized multiple elements, including banner, buttons, commands",
+    "# Modified moderately the changelog page",
+    "# Fixed some minor layout bugs"
   ]
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Josefin+Sans:wght@500&family=Poiret+One&family=Poppins&family=Quicksand:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -108,7 +109,7 @@ code,
   color: #d5beff;
   font-size: 19px;
   padding: 0 5px;
-  font-family: "Consolas";
+  font-family: "Ubuntu Mono";
 }
 small {
   display: block;
@@ -390,12 +391,6 @@ a:active {
   animation-delay: 0.1s;
 }
 body:hover .titlebg img:hover {
-  background-image: repeating-radial-gradient(
-      circle at 0 0,
-      transparent 0,
-      #000000 40px
-    ),
-    repeating-linear-gradient(#4c00b955, #b2ff7e);
   transition: 0.2s;
 }
 @keyframes vibrate-1 {
@@ -947,12 +942,14 @@ td {
     text-align: center;
     display: block;
     flex-grow: unset;
+    margin: 10px 2.5%;
   }
   #navclose {
     width: 95%;
     flex-grow: unset;
     text-align: center;
     display: block;
+    margin: 10px 2.5%;
   }
   #announcement {
     width: 90%;
@@ -964,10 +961,14 @@ td {
     transform: none;
     width: 95%;
     margin: 0 10px;
+    font-size: 12px;
+  }
+  .mainbutton {
+    margin: 0 1.25vw;
   }
   .button {
-    margin: 10px 5vw;
-    width: 90vw;
+    margin: 10px 1.5vw;
+    width: 44vw;
   }
   .imgsection p {
     font-size: 12px;
@@ -1026,18 +1027,32 @@ td {
   }
   .filterDiv p {
     max-width: 100%;
+    font-size: 12px;
     text-align: center;
-    white-space: unset;
+    white-space: initial;
     text-overflow: unset;
     overflow: auto;
     text-align: left;
   }
   .filterDiv h3 {
     width: 95%;
+    font-size: 17px;
     border-radius: 10px;
   }
   .filterDiv .more {
     height: fit-content;
+    font-size: 12px;
+  }
+  .filterDiv p .code,
+  .filterDiv code {
+    margin: 2.5px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+  }
+  .filterDiv small {
+    font-size: 10px;
+    color: rgb(238, 255, 140);
   }
   .prev .material-icons.md-48,
   .next .material-icons.md-48 {
@@ -1050,5 +1065,14 @@ td {
 @media screen and (max-width: 500px) {
   table {
     font-size: 3vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .button {
+    width: 95%;
+    margin: 10px 2.5%;
+  }
+  .center {
+    width: 100vw;
   }
 }

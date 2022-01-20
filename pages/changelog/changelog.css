@@ -74,8 +74,13 @@ h2 {
   margin: 0;
   margin-top: 20px;
   font-family: "Poppins";
-  font-size: 40px;
+  font-size: 35px;
   margin-left: 50px;
+  color: #1b1b1b;
+  background-color: #bdbdbd;
+  padding: 5px;
+  border-radius: 10px;
+  width: fit-content;
 }
 h3 {
   margin-top: 20px;
@@ -83,14 +88,14 @@ h3 {
   margin-right: 50px;
   font-family: "Josefin Sans";
   text-align: right;
-  font-size: 25px;
+  font-size: 20px;
 }
 h4 {
   margin: 0;
   margin-right: 50px;
   font-family: "Josefin Sans";
   text-align: right;
-  font-size: 20px;
+  font-size: 17px;
 }
 .container {
   background-color: #333333;
@@ -104,11 +109,11 @@ h4 {
 ul {
   font-family: Quicksand;
   max-width: 80%;
-  font-size: 20px;
+  font-size: 15px;
 }
 #ts {
   float: right;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .mainbutton {
@@ -169,4 +174,35 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
   background: #8e51ff;
   transition: 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+  #ts {
+    display: block;
+    float: none;
+    margin-top: 20px;
+  }
+  ul {
+    max-width: 100%;
+    /* margin-right: 10px;
+    margin: 0; */
+    font-size: 12px;
+    padding-left: 20px;
+    text-align: justify;
+    margin-right: 10px;
+  }
+  h2 {
+    text-align: center;
+    margin: 15px 25%;
+    font-size: 30px;
+    width: 50%;
+  }
+  h3 {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  h4 {
+    margin-right: 10px;
+    font-size: 15px;
+  }
 }
