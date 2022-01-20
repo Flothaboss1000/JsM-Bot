@@ -91,7 +91,6 @@ window.onload = async function () {
         navbar.text.innerHTML = japi.text;
       }
       navbar.icon.innerHTML = statusicon[japi.status];
-      navbar.text.innerHTML = statusmsg[8];
     });
 
   // This code snippet controls when the console shoudl disappear from the screen
