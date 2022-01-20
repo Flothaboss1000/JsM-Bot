@@ -47,7 +47,53 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-window.onload = function () {
+let navbar = {
+  self: document.getElementById("navbar"),
+  text: document.getElementById("announce"),
+  icon: document.getElementById("navicon"),
+};
+const statusmsg = {
+  1: "There is currently an outage with the bot. Please bear with us.",
+  2: "The bot is currently down for a fix or an update.",
+  3: "We've updated the bot! Check out its new features!",
+  4: "Update coming soon...",
+  5: "Event coming soon...",
+  6: "We are about to reach a new milestone!",
+  7: "An internal API is down, some commands won't work.",
+  8: "Like the bot? Support us by voting for the bot or boosting our support server!",
+  9: "Internal error, bot will stay online, might not respond.",
+  99: "Welcome to JsM Bot. Happy to serve you!",
+};
+const statusicon = {
+  1: "report_gmailerrorred",
+  2: "construction",
+  3: "new_releases",
+  4: "update",
+  5: "event",
+  6: "celebration",
+  7: "error",
+  8: "campaign",
+  9: "warning",
+  99: "announcement",
+};
+
+window.onload = async function () {
+  await fetch("https://jsmapi.jsmsj.repl.co/announce")
+    .then((e) => e.json())
+    .then(async (japi) => {
+      console.log(japi);
+      if (japi.status === 0) {
+        navbar.self.remove();
+      }
+      if (japi.text === "") {
+        navbar.text.innerHTML = statusmsg[japi.status];
+      } else {
+        navbar.text.innerHTML = japi.text;
+      }
+      navbar.icon.innerHTML = statusicon[japi.status];
+      navbar.text.innerHTML = statusmsg[8];
+    });
+
   // This code snippet controls when the console shoudl disappear from the screen
   setTimeout(() => {
     var loadscreen = document.getElementById("loading");
@@ -70,9 +116,10 @@ fetch("./assets/update.json")
     document.getElementById("ver").innerHTML = g;
   });
 
+// jsmsj API
+
 //Get the button:
 var totop = document.getElementById("totop");
-var navbar = document.getElementById("navbar");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -81,10 +128,8 @@ window.onscroll = function () {
     document.documentElement.scrollTop > 590
   ) {
     totop.style.bottom = "20px";
-    navbar.style.top = "5px";
   } else {
     totop.style.bottom = "-100px";
-    navbar.style.top = "-150px";
   }
 };
 

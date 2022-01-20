@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Josefin+Sans:wght@500&family=Poiret+One&family=Poppins:wght@500&family=Quicksand&display=swap");
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+body {
+  background: radial-gradient(
+      #3b3b3b 10%,
+      transparent 10%,
+      transparent 39%,
+      #3b3b3b 40%,
+      #3b3b3b 45%,
+      transparent 46%
+    ),
+    radial-gradient(
+      circle at top left,
+      #3b3b3b 4%,
+      transparent 5%,
+      transparent 19%,
+      #3b3b3b 20%,
+      #3b3b3b 22%,
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at top right,
+      #3b3b3b 4%,
+      transparent 5%,
+      transparent 19%,
+      #3b3b3b 20%,
+      #3b3b3b 22%,
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      #3b3b3b 4%,
+      transparent 5%,
+      transparent 19%,
+      #3b3b3b 20%,
+      #3b3b3b 22%,
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      #3b3b3b 4%,
+      transparent 5%,
+      transparent 19%,
+      #3b3b3b 20%,
+      #3b3b3b 22%,
+      transparent 23%
+    );
+  background-size: 6em 6em;
+  background-color: #000000;
+  opacity: 1;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "Fugaz One";
+  text-align: center;
+  font-size: 50px;
+}
+h2 {
+  margin: 0;
+  margin-top: 20px;
+  font-family: "Poppins";
+  font-size: 40px;
+  margin-left: 50px;
+}
+h3 {
+  margin-top: 20px;
+  margin: 0;
+  margin-right: 50px;
+  font-family: "Josefin Sans";
+  text-align: right;
+  font-size: 25px;
+}
+h4 {
+  margin: 0;
+  margin-right: 50px;
+  font-family: "Josefin Sans";
+  text-align: right;
+  font-size: 20px;
+}
+.container {
+  background-color: #333333;
+  margin: 20px;
+  padding: 10px;
+  border-color: #b05dff;
+  border-style: solid;
+  border-width: 0px 0px 0px 5px;
+  border-radius: 15px;
+}
+ul {
+  font-family: Quicksand;
+  max-width: 80%;
+  font-size: 20px;
+}
+#ts {
+  float: right;
+  margin-top: 40px;
+}
+
+.mainbutton {
+  height: fit-content;
+  position: relative;
+  margin-bottom: 20px;
+}
+.center {
+  margin: 0px auto;
+  width: fit-content;
+}
+
+.button {
+  font-family: "Josefin Sans";
+  border: none;
+  outline: none;
+  padding: 12px 16px 10px 16px;
+  background-color: #34235f;
+  box-shadow: 0px 10px 20px #000000a2;
+  color: #e2b6ff;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 80px;
+  transition: 0.5s;
+  width: 115px;
+  margin: 10px 5px;
+  display: inline-block;
+}
+.button p {
+  font-size: 15px;
+  margin: 0;
+}
+.button:hover {
+  background-color: #be9bff;
+  box-shadow: 0px 10px 20px #34235f;
+  color: #5100ad;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.button:active {
+  background-color: #742aff;
+  color: rgb(236, 209, 255);
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8e51ff;
+  transition: 0.2s;
+}

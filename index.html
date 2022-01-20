@@ -59,6 +59,27 @@
   <body>
     <div id="loading">
       <div id="console"></div>
+      <button
+        id="skipload"
+        onclick="document.getElementById('loading').remove()"
+      >
+        Skip Loading
+      </button>
+    </div>
+    <div id="navbar">
+      <span id="navicon" class="material-icons md-36">newspaper</span>
+      <div id="announcetext">
+        <p id="announce">
+          Hello! This is test text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+      </div>
+      <span
+        id="navclose"
+        class="material-icons md-36"
+        onclick="document.getElementById('navbar').remove()"
+        >close</span
+      >
     </div>
     <div class="titlebg">
       <img
@@ -80,10 +101,7 @@
 
     <div class="mainbutton">
       <div class="center">
-        <a
-          href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
-          target="_blank"
-        >
+        <a href="https://dsc.gg/jsmbot" target="_blank">
           <button class="button">
             <span class="material-icons md-36">send</span>
             <p>Invite Me</p>
@@ -95,10 +113,16 @@
             <p>Top.gg</p>
           </button>
         </a>
-        <a href="https://discord.gg/rbcmYcAxJe" target="_blank">
+        <a href="https://dsc.gg/jsmsupport" target="_blank">
           <button class="button">
             <span class="material-icons md-36">contact_support</span>
             <p>Support</p>
+          </button>
+        </a>
+        <a href="https://statcord.com/bot/870932828504866816/" target="_blank">
+          <button class="button">
+            <span class="material-icons md-36">trending_up</span>
+            <p>Statistics</p>
           </button>
         </a>
         <a href="https://stats.uptimerobot.com/yzq6Bt722D" target="_blank">
@@ -115,38 +139,7 @@
         </a>
       </div>
     </div>
-    <div id="navbar">
-      <img src="assets/logoo.png" alt="" height="50" width="50" />
-      <h1>JsM Bot</h1>
-      <a href="#cdmheader">
-        <button class="navbutton">
-          <span class="material-icons md-36">terminal</span>
-        </button>
-      </a>
-      <a href="https://stats.uptimerobot.com/yzq6Bt722D" target="_blank">
-        <button class="navbutton">
-          <span class="material-icons md-36">sensors</span>
-        </button>
-      </a>
-      <a href="https://discord.gg/rbcmYcAxJe" target="_blank">
-        <button class="navbutton">
-          <span class="material-icons md-36">contact_support</span>
-        </button>
-      </a>
-      <a href="https://top.gg/bot/870932828504866816" target="_blank">
-        <button class="navbutton">
-          <span class="material-icons md-36">web</span>
-        </button>
-      </a>
-      <a
-        href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
-        target="_blank"
-      >
-        <button class="navbutton">
-          <span class="material-icons md-36">send</span>
-        </button>
-      </a>
-    </div>
+
     <br />
     <h2>Why JsM?</h2>
     <br />
@@ -312,7 +305,7 @@
         </div>
       </div>
       <div class="imgsection" id="card6">
-        <h4>Overall an all-inclusive package!</h4>
+        <h4>An all-inclusive package!</h4>
         <p>
           I have much more capability and functionality to offer. I provide many
           amusing fun commands and other miscellanous tools, such as currency
@@ -1525,10 +1518,7 @@
     <p>So what are you waiting for?</p>
     <div class="mainbutton">
       <div class="center">
-        <a
-          href="https://discord.com/oauth2/authorize?client_id=870932828504866816&permissions=415306739062&scope=bot"
-          target="_blank"
-        >
+        <a href="https://dsc.gg/jsmbot" target="_blank">
           <button class="button">
             <span class="material-icons md-36">send</span>
             <p>Invite Me</p>
@@ -1565,7 +1555,10 @@
         </tbody>
       </table>-->
       <small id="ver"></small>
-      <script src="main.js"></script>
+      <small
+        ><a href="./pages/changelog/changelog.html">View Changelog</a></small
+      >
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
