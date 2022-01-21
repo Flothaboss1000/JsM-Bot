@@ -1,9 +1,9 @@
 {
-  "title": "Update 1.2.1",
+  "title": "Update 1.2.2",
   "list": [
-    "+ Improved mobile support",
-    "# Resized multiple elements, including banner, buttons, commands",
-    "# Modified moderately the changelog page",
-    "# Fixed some minor layout bugs"
+    "+ Improved loading screen",
+    "+ Improved layouts of banner and buttons for mobile",
+    "+ Improved hover UI of the changelog",
+    "- Decreased first loading time of the site"
   ]
 }

@@ -140,13 +140,13 @@ a:active {
   text-align: left;
 }
 #console {
-  font-family: courier, monospace;
+  font-family: "Ubuntu Mono", monospace;
   color: #fff;
-  width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
   margin-top: 100px;
-  font-size: 14px;
+  font-size: 18px;
   text-align: left;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -154,6 +154,28 @@ a:active {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  display: inline-block;
+}
+#cursor {
+  display: inline-block;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  display: inline;
+}
+@keyframes blink {
+  0% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  51% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+  }
 }
 #console p {
   font-size: 14px;
@@ -310,8 +332,8 @@ a:active {
 }
 
 #navbar {
-  position: sticky;
-  top: 20px;
+  position: fixed;
+  top: 10px;
   margin: 0px 2.5vw 20px;
   width: 95vw;
   z-index: 75;
@@ -376,7 +398,7 @@ a:active {
   display: block;
   height: 225px;
   width: 225px;
-  margin: 10px auto 10px;
+  margin: 70px auto 10px;
   transition: 0.4s;
   box-shadow: 0px 10px 30px #000000;
 }
@@ -933,20 +955,27 @@ td {
   h1 {
     font-size: 10vw;
   }
+  #console {
+    font-size: 14px;
+  }
   #navbar {
     height: fit-content;
     display: inline-block;
   }
   #navicon {
-    width: 95%;
+    width: 50%;
     text-align: center;
     flex-grow: unset;
     margin: 10px 2.5%;
+    position: relative;
   }
   #navclose {
     flex-grow: unset;
     text-align: center;
     margin: 10px 2.5%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
   #announcement {
     width: 90%;
@@ -957,9 +986,9 @@ td {
     position: static;
     transform: none;
     display: block;
-    width: 95%;
-    margin: 0 10px;
-    font-size: 12px;
+    width: 90vw;
+    margin: 15px 10px;
+    font-size: 15px;
   }
   .mainbutton {
     margin: 0 1.25vw;

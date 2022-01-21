@@ -1,8 +1,8 @@
 <span id="a">jsmsj#5252@JsM-Bot</span> <span id="b">MINGW64</span> <span id="c">~</span>
 $ cd JsM-Bot<br/><br/>
-<span id="a">jsmsj#5252@JsM-Bot</span> <span id="b">MINGW64</span> <span id="c">~/JsM-Bot</span>
-$ cat about_me.txt
-Developer: jsmsj#5252
+<span id="a">jsmsj#5252@JsM-Bot</span> <span id="b">MINGW64</span> <span id="c">~/JsM-Bot</span><br/>
+$ cat about_me.txt<br/>
+Developer: jsmsj#5252<br/>
 Site Developer: Flothaboss1000<br/><br/>
 <span id="a">jsmsj#5252@JsM-Bot</span> <span id="b">MINGW64</span> <span id="c">~/JsM-Bot</span>
 $ start index.html
