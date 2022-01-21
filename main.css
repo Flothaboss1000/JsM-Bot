@@ -940,15 +940,12 @@ td {
   #navicon {
     width: 95%;
     text-align: center;
-    display: block;
     flex-grow: unset;
     margin: 10px 2.5%;
   }
   #navclose {
-    width: 95%;
     flex-grow: unset;
     text-align: center;
-    display: block;
     margin: 10px 2.5%;
   }
   #announcement {
@@ -959,6 +956,7 @@ td {
     left: 0;
     position: static;
     transform: none;
+    display: block;
     width: 95%;
     margin: 0 10px;
     font-size: 12px;
@@ -969,6 +967,7 @@ td {
   .button {
     margin: 10px 1.5vw;
     width: 44vw;
+    padding: 12px 2.5vw;
   }
   .imgsection p {
     font-size: 12px;
@@ -1065,14 +1064,5 @@ td {
 @media screen and (max-width: 500px) {
   table {
     font-size: 3vw;
-  }
-}
-@media screen and (max-width: 400px) {
-  .button {
-    width: 95%;
-    margin: 10px 2.5%;
-  }
-  .center {
-    width: 100vw;
   }
 }
