@@ -981,6 +981,9 @@ td {
     width: 90px;
     transform: translateY(-5px);
   }
+  .cmdbtn:active {
+    transform: translateY(5px);
+  }
   .container {
     height: fit-content;
     max-height: 80vh;
