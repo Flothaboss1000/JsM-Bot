@@ -1,9 +1,12 @@
 {
-  "title": "Update 1.2.2",
+  "title": "Update 1.2.3",
   "list": [
-    "+ Improved loading screen",
-    "+ Improved layouts of banner and buttons for mobile",
-    "+ Improved hover UI of the changelog",
-    "- Decreased first loading time of the site"
+    "+ Moved command category selector to side for bigger screens",
+    "- Reduced size of elements in commands list",
+    "- Compacted the command syntax clarification banner",
+    "# Fixed some grammatical errors in commands",
+    "# Fixed layout bugs in mobile",
+    "# Updated command list columns to appear for smaller screens",
+    "# Fixed bug making site scroll up to top when loading was finished"
   ]
 }

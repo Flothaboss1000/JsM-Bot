@@ -117,9 +117,6 @@ window.onload = async function () {
       loadscreen.style.visibility = "hidden";
     }, 1000);
   }, 1500);
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 1401);
 };
 
 fetch("./assets/update.json")

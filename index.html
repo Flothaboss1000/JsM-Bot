@@ -430,7 +430,7 @@
           &lt;&gt; means the field is required, [] means the field is optional
         </p>
         <button onclick="document.getElementById('alert').remove()">
-          Close
+          <span class="material-icons md-36">close</span>
         </button>
       </div>
 
@@ -686,9 +686,10 @@
       </div>
       <div class="filterDiv util">
         <h3>timer</h3>
-        <p>Creates a timer (countdown), cannot go more than 10 minutes</p>
+        <p>Creates a timer (countdown)</p>
         <div class="more">
           <code>j timer [number of seconds]</code>
+          <small>Cannot go more than 10 minutes</small>
         </div>
       </div>
       <div class="filterDiv util">
@@ -963,15 +964,13 @@
       </div>
       <div class="filterDiv maths">
         <h3>wolf</h3>
-        <p>
-          Solves/Gives output of your questions, can be mathematical or
-          geographical
-        </p>
+        <p>Solves/Gives output of your questions</p>
         <div class="more">
           <p>
             <span class="code">j wolf 3x^2 2x -4 =0</span> or
             <span class="code">j wolf what is momentum</span>
           </p>
+          <small>Can be mathematical or geographical</small>
         </div>
       </div>
       <div class="filterDiv maths">
@@ -1006,7 +1005,7 @@
       </div>
       <div class="filterDiv maths">
         <h3>2var</h3>
-        <p>Linear equation in two variables</p>
+        <p>Solves a linear equation in two variables</p>
         <div class="more">
           <code
             >j 2var &lt;eqn1&gt; ; &lt;eqn2&gt;<br />j 2var 2x+5y-20 ;
@@ -1050,7 +1049,7 @@
       </div>
       <div class="filterDiv maths">
         <h3>solve</h3>
-        <p>Solves the given equation. Domain is by default, complex.</p>
+        <p>Solves the given equation</p>
         <div class="more">
           <p>
             <span class="code">j solve &lt;equation&gt; [domain]</span><br />
@@ -1059,6 +1058,7 @@
             <span class="code">j solve x^2+x+1=0</span>
           </p>
           <small>Make sure equation has =0 at end</small>
+          <small>Domain is by default, complex</small>
         </div>
       </div>
       <div class="filterDiv maths">
@@ -1175,7 +1175,7 @@
       </div>
       <div class="filterDiv chem">
         <h3>searchname</h3>
-        <p>Search for a Compound by its name</p>
+        <p>Search for a compound by its name</p>
         <div class="more">
           <code
             >j searchname &lt;compound_formula&gt;<br />j searchname
@@ -1185,7 +1185,7 @@
       </div>
       <div class="filterDiv chem">
         <h3>searchformula</h3>
-        <p>Search for a Compound by its name</p>
+        <p>Search for a compound by its formula</p>
         <div class="more">
           <code
             >j searchformula &lt;compound_formula&gt;<br />j searchformula
@@ -1403,7 +1403,7 @@
       </div>
       <div class="filterDiv api">
         <h3>rhyme</h3>
-        <p>Gets possible spellings of give word</p>
+        <p>Gets possible spellings of given word</p>
         <div class="more">
           <code
             >j spelling &lt;word&gt;<br />
