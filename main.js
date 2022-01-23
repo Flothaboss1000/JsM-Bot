@@ -39,7 +39,6 @@ function w3RemoveClass(element, name) {
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("cmdbtn");
-console.log(btns);
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
@@ -51,30 +50,6 @@ let navbar = {
   self: document.getElementById("navbar"),
   text: document.getElementById("announce"),
   icon: document.getElementById("navicon"),
-};
-const statusmsg = {
-  1: "There is currently an outage with the bot. Please bear with us.",
-  2: "The bot is currently down for a fix or an update.",
-  3: "We've updated the bot! Check out its new features!",
-  4: "Update coming soon...",
-  5: "Event coming soon...",
-  6: "We are about to reach a new milestone!",
-  7: "An internal API is down, some commands won't work.",
-  8: "Like the bot? Support us by voting for the bot or boosting our support server!",
-  9: "Internal error, bot will stay online, might not respond.",
-  99: "Welcome to JsM Bot. Happy to serve you!",
-};
-const statusicon = {
-  1: "report_gmailerrorred",
-  2: "construction",
-  3: "new_releases",
-  4: "update",
-  5: "event",
-  6: "celebration",
-  7: "error",
-  8: "campaign",
-  9: "warning",
-  99: "announcement",
 };
 
 function typer(res) {
@@ -100,11 +75,11 @@ window.onload = async function () {
         navbar.self.remove();
       }
       if (japi.text === "") {
-        navbar.text.innerHTML = statusmsg[japi.status];
+        navbar.text.innerHTML = japi.statusmsg[japi.status];
       } else {
         navbar.text.innerHTML = japi.text;
       }
-      navbar.icon.innerHTML = statusicon[japi.status];
+      navbar.icon.innerHTML = japi.statusicon[japi.status];
     });
 
   // This code snippet controls when the console shoudl disappear from the screen
@@ -118,22 +93,24 @@ window.onload = async function () {
     }, 1000);
   }, 1500);
 };
-fetch("https://ip-address-js.herokuapp.com/")
+fetch("https://ipadd.jsmsj.repl.co/")
   .catch((err) => err)
   .then((e) => e.text())
-  .then(
-    async (ipres) =>
-      await fetch("https://jsmapi.jsmsj.repl.co/logfile", {
-        method: "POST",
-        body: JSON.stringify({ ip: ipres }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-          Authorization: "TzpN2HM2.%#+QrBp",
-        },
-      })
-        .then((res) => res.json())
-        .then((res) => console.log(res))
-  )
+  .then(async (ipres) => {
+    if (window.location.href == "https://flothaboss1000.github.io/JsM-Bot/") {
+      return;
+    }
+    await fetch("https://jsmapi.jsmsj.repl.co/logfile", {
+      method: "POST",
+      body: JSON.stringify({ ip: ipres }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Authorization: "TzpN2HM2.%#+QrBp",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  })
   .catch((err) =>
     fetch("https://jsmapi.jsmsj.repl.co/logfile", {
       method: "POST",
