@@ -97,7 +97,10 @@ fetch("https://ipadd.jsmsj.repl.co/")
   .catch((err) => err)
   .then((e) => e.text())
   .then(async (ipres) => {
-    if (window.location.href == "https://flothaboss1000.github.io/JsM-Bot/") {
+    if (
+      window.location.href == "https://flothaboss1000.github.io/JsM-Bot/" ||
+      window.location.href == "https://flothaboss1000.github.io/JsM-Bot/"
+    ) {
       return;
     }
     await fetch("https://jsmapi.jsmsj.repl.co/logfile", {
