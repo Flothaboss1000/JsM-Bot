@@ -77,25 +77,25 @@ const statusicon = {
   99: "announcement",
 };
 
+function typer(res) {
+  for (let i = 0; i < res.length; i++) {
+    setTimeout(() => {
+      document.getElementById("console").innerHTML =
+        res.substr(0, i + 1) + `<span id="cursor">|</span>`;
+    }, 3 * (i + 1));
+  }
+}
+
 window.onload = async function () {
-  fetch("./assets/consoletxt.txt")
+  await fetch("./assets/consoletxt.txt")
     .then((res) => res.text())
     .then((res) => typer(res));
-
-  function typer(res) {
-    console.log(res);
-    for (let i = 0; i < res.length; i++) {
-      setTimeout(() => {
-        document.getElementById("console").innerHTML =
-          res.substr(0, i + 1) + `<span id="cursor">|</span>`;
-      }, 3 * (i + 1));
-    }
-  }
 
   await fetch("https://jsmapi.jsmsj.repl.co/announce")
     .then((e) => e.json())
     .then(async (japi) => {
-      console.log(japi);
+      console.log(japi.status);
+      console.log(`Text: ${japi.text}`);
       if (japi.status === 0) {
         navbar.self.remove();
       }
@@ -117,6 +117,35 @@ window.onload = async function () {
       loadscreen.style.visibility = "hidden";
     }, 1000);
   }, 1500);
+
+  await fetch("https://api.ipify.org/?format=json")
+    .catch((err) => err)
+    .then((e) => e.json())
+    .then(
+      async (ipres) =>
+        await fetch("https://jsmapi.jsmsj.repl.co/logfile", {
+          method: "POST",
+          body: JSON.stringify({ ip: ipres.ip }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            Authorization: "TzpN2HM2.%#+QrBp",
+          },
+        })
+          .then((res) => res.json())
+          .then((res) => console.log(res))
+    )
+    .catch((err) =>
+      fetch("https://jsmapi.jsmsj.repl.co/logfile", {
+        method: "POST",
+        body: JSON.stringify({ ip: "IP Not Received" }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: "TzpN2HM2.%#+QrBp",
+        },
+      })
+        .then((res) => res.json())
+        .then((res) => console.log(res))
+    );
 };
 
 fetch("./assets/update.json")
@@ -186,4 +215,10 @@ function showSlides(n, no) {
     x[i].style.display = "none";
   }
   x[slideIndex[no] - 1].style.display = "block";
+}
+
+function loadwidget(self) {
+  document.getElementById("widgetbot").innerHTML =
+    "<iframe src='https://e.widgetbot.io/channels/915922698230726667/916674642545086484' height='600' width='100%'></iframe>";
+  self.remove();
 }

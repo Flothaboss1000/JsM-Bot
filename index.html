@@ -7,7 +7,7 @@
     <meta name="keywords" content="JsM, Bot, Discord Bot, jsmsj, Jsm Bot" />
 
     <!-- Primary Meta Tags -->
-    <title>JsM Bot</title>
+    <title>JsM Discord Bot</title>
     <meta
       name="title"
       content="JsM Bot - A powerful and multipurpose Discord bot"
@@ -1525,11 +1525,19 @@
     </div>
     <br />
     <p>Check out our support server too!</p>
-    <iframe
-      src="https://e.widgetbot.io/channels/915922698230726667/916674642545086484"
-      height="600"
-      width="100%"
-    ></iframe>
+    <div class="mainbutton">
+      <div class="center">
+        <a>
+          <button class="button" id="loadwidget" onclick="loadwidget(this)">
+            <span class="material-icons md-36">widgets</span>
+            <p>Load Server Widget</p>
+            <small>Requires cookies</small>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div id="widgetbot"></div>
+
     <br />
     <br />
     <footer>
@@ -1552,9 +1560,8 @@
         </tbody>
       </table>-->
       <small id="ver"></small>
-      <small
-        ><a href="./pages/changelog/changelog.html">View Changelog</a></small
-      >
+      <a href="./pages/changelog/changelog.html">View Changelog</a>
+      <a href="https://jsm-bot.github.io/privacy/">Privacy Policy</a>
     </footer>
     <script src="main.js"></script>
   </body>

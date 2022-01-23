@@ -1,12 +1,8 @@
 {
-  "title": "Update 1.2.3",
+  "title": "Update 1.3.0",
   "list": [
-    "+ Moved command category selector to side for bigger screens",
-    "- Reduced size of elements in commands list",
-    "- Compacted the command syntax clarification banner",
-    "# Fixed some grammatical errors in commands",
-    "# Fixed layout bugs in mobile",
-    "# Updated command list columns to appear for smaller screens",
-    "# Fixed bug making site scroll up to top when loading was finished"
+    "+ Added 'Privacy Policy' page",
+    "- Disabled the server bot widget by default",
+    "# Modified links in footer"
   ]
 }
