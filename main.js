@@ -117,27 +117,15 @@ window.onload = async function () {
       loadscreen.style.visibility = "hidden";
     }, 1000);
   }, 1500);
-
-  await fetch("https://api.ipify.org/?format=json")
-    .catch((err) => err)
-    .then((e) => e.json())
-    .then(
-      async (ipres) =>
-        await fetch("https://jsmapi.jsmsj.repl.co/logfile", {
-          method: "POST",
-          body: JSON.stringify({ ip: ipres.ip }),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-            Authorization: "TzpN2HM2.%#+QrBp",
-          },
-        })
-          .then((res) => res.json())
-          .then((res) => console.log(res))
-    )
-    .catch((err) =>
-      fetch("https://jsmapi.jsmsj.repl.co/logfile", {
+};
+fetch("https://ip-address-js.herokuapp.com/")
+  .catch((err) => err)
+  .then((e) => e.text())
+  .then(
+    async (ipres) =>
+      await fetch("https://jsmapi.jsmsj.repl.co/logfile", {
         method: "POST",
-        body: JSON.stringify({ ip: "IP Not Received" }),
+        body: JSON.stringify({ ip: ipres }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
           Authorization: "TzpN2HM2.%#+QrBp",
@@ -145,8 +133,19 @@ window.onload = async function () {
       })
         .then((res) => res.json())
         .then((res) => console.log(res))
-    );
-};
+  )
+  .catch((err) =>
+    fetch("https://jsmapi.jsmsj.repl.co/logfile", {
+      method: "POST",
+      body: JSON.stringify({ ip: "IP Not Received" }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Authorization: "TzpN2HM2.%#+QrBp",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+  );
 
 fetch("./assets/update.json")
   .then((e) => e.json())
