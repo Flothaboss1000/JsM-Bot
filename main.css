@@ -737,8 +737,8 @@ button .cmdbtn + p {
   background-color: #d4d45d;
   padding: 10px;
   border-radius: 15px;
-  font-size: 25px;
   left: 0px;
+  max-height: 40px;
   float: left;
   position: relative;
 }
@@ -1120,7 +1120,7 @@ td {
     height: fit-content;
     margin: 10px 2.5px 20px 2.5px;
     width: 100%;
-    min-height: 70px;
+    min-height: 50px;
   }
   #alert p {
     font-size: 11px;

@@ -99,7 +99,9 @@ fetch("https://ipadd.jsmsj.repl.co/")
   .then(async (ipres) => {
     if (
       window.location.href == "https://flothaboss1000.github.io/JsM-Bot/" ||
-      window.location.href == "https://flothaboss1000.github.io/JsM-Bot/"
+      window.location.href ==
+        "https://flothaboss1000.github.io/JsM-Bot/index.html" ||
+      window.location.href.startsWith("http://127.0.0.1")
     ) {
       return;
     }
