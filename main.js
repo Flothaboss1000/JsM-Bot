@@ -69,6 +69,7 @@ var userdata = {
   },
   duration: null,
   ip: "",
+  pings: 0,
   hardware: null,
 };
 
@@ -242,12 +243,10 @@ window.addEventListener("click", async () => userdata.interactions.clicks++);
 window.addEventListener("scroll", async () => userdata.interactions.scrolls++);
 window.addEventListener("error", async () => userdata.interactions.errors++);
 
-window.onunload = async () => {
+setInterval(async () => {
+  console.log(userdata.pings);
   userdata.duration = Date.now() - userdata.duration;
-  if (
-    window.location.href.startsWith("https://flothaboss1000.github.io/") ||
-    window.location.href.startsWith("http://127.0.0.1")
-  )
+  if (window.location.href.startsWith("https://flothaboss1000.github.io/"))
     return;
   await fetch("https://jsmapi.jsmsj.repl.co/session", {
     method: "POST",
@@ -259,4 +258,5 @@ window.onunload = async () => {
   })
     .then((res) => res.json())
     .then((res) => console.log(res));
-};
+  userdata.pings++;
+}, 30000);
