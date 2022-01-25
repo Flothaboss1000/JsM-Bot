@@ -445,6 +445,14 @@ body:hover .titlebg img:hover {
     transform: translate(0);
   }
 }
+@keyframes navbarclose {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: -200px;
+  }
+}
 
 .mainbutton {
   height: fit-content;

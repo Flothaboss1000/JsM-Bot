@@ -208,3 +208,10 @@ function loadwidget(self) {
     "<iframe src='https://e.widgetbot.io/channels/915922698230726667/916674642545086484' height='600' width='100%'></iframe>";
   self.remove();
 }
+
+function navbarclose() {
+  document.getElementById("navbar").style.animation =
+    "navbarclose 1.5s ease 0.5s 1 normal";
+  document.getElementById("navbar").style.animationFillMode = "forwards";
+  document.getElementById("navbar").style.filter = "saturate(0)";
+}
