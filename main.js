@@ -246,7 +246,10 @@ window.addEventListener("error", async () => userdata.interactions.errors++);
 setInterval(async () => {
   console.log(userdata.pings);
   userdata.duration = Date.now() - userdata.duration;
-  if (window.location.href.startsWith("https://flothaboss1000.github.io/"))
+  if (
+    window.location.href.startsWith("https://flothaboss1000.github.io/") ||
+    window.location.href.startsWith("http://127.0.0.1")
+  )
     return;
   await fetch("https://jsmapi.jsmsj.repl.co/session", {
     method: "POST",
