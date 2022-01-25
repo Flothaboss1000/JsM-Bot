@@ -750,11 +750,13 @@ button .cmdbtn + p {
   padding: 10px;
   border-radius: 15px;
   left: 0px;
-  max-height: 40px;
+  max-height: 50px;
   float: left;
   position: relative;
+  user-select: none;
 }
 #alert button {
+  cursor: pointer;
   position: relative;
   background-color: #ff9e9e;
   border: none;

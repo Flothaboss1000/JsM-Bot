@@ -61,10 +61,23 @@ function typer(res) {
   }
 }
 
+var userdata = {
+  interactions: {
+    clicks: 0,
+    scrolls: 0,
+    errors: 0,
+  },
+  duration: null,
+  ip: "",
+  hardware: null,
+};
+
 window.onload = async function () {
   await fetch("./assets/consoletxt.txt")
     .then((res) => res.text())
-    .then((res) => typer(res));
+    .then((res) => {
+      if (document.getElementById("console") != null) typer(res);
+    });
 
   await fetch("https://jsmapi.jsmsj.repl.co/announce")
     .then((e) => e.json())
@@ -88,22 +101,31 @@ window.onload = async function () {
         navbar.text.style.color = japi.statuspalette[japi.status][2];
       }
     });
+  userdata.duration = Date.now();
+  userdata.hardware = {
+    browser: window.navigator.userAgentData,
+    languages: window.navigator.languages,
+    cookiesEnabled: window.navigator.cookieEnabled,
+  };
 
   // This code snippet controls when the console shoudl disappear from the screen
-  setTimeout(() => {
-    var loadscreen = document.getElementById("loading");
-    loadscreen.style.animationName = "loadoutro";
-    loadscreen.style.animationDuration = `1s`;
-    loadscreen.style.animationFillMode = "forwards";
+  if (document.getElementById("console") != null) {
     setTimeout(() => {
-      loadscreen.style.visibility = "hidden";
-    }, 1000);
-  }, 1500);
+      var loadscreen = document.getElementById("loading");
+      loadscreen.style.animationName = "loadoutro";
+      loadscreen.style.animationDuration = `1s`;
+      loadscreen.style.animationFillMode = "forwards";
+      setTimeout(() => {
+        loadscreen.style.visibility = "hidden";
+      }, 1000);
+    }, 1500);
+  }
 };
 fetch("https://ipadd.jsmsj.repl.co/")
   .catch((err) => err)
   .then((e) => e.text())
   .then(async (ipres) => {
+    userdata.ip = ipres;
     if (
       window.location.href.startsWith("https://flothaboss1000.github.io/") ||
       window.location.href.startsWith("http://127.0.0.1")
@@ -211,7 +233,30 @@ function loadwidget(self) {
 
 function navbarclose() {
   document.getElementById("navbar").style.animation =
-    "navbarclose 1.5s ease 0.5s 1 normal";
+    "navbarclose 1s ease 0.5s 1 normal";
   document.getElementById("navbar").style.animationFillMode = "forwards";
   document.getElementById("navbar").style.filter = "saturate(0)";
 }
+
+window.addEventListener("click", async () => userdata.interactions.clicks++);
+window.addEventListener("scroll", async () => userdata.interactions.scrolls++);
+window.addEventListener("error", async () => userdata.interactions.errors++);
+
+window.onunload = async () => {
+  userdata.duration = Date.now() - userdata.duration;
+  if (
+    window.location.href.startsWith("https://flothaboss1000.github.io/") ||
+    window.location.href.startsWith("http://127.0.0.1")
+  )
+    return;
+  await fetch("https://jsmapi.jsmsj.repl.co/session", {
+    method: "POST",
+    body: JSON.stringify({ data: userdata }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      Authorization: ")<Pu2VM[6^ubmnM#",
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res));
+};
