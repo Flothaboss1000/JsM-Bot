@@ -80,6 +80,13 @@ window.onload = async function () {
         navbar.text.innerHTML = japi.text;
       }
       navbar.icon.innerHTML = japi.statusicon[japi.status];
+
+      if (japi.status != 0) {
+        navbar.self.style.backgroundColor = japi.statuspalette[japi.status][0];
+        navbar.icon.style.backgroundColor = japi.statuspalette[japi.status][1];
+        navbar.icon.style.color = japi.statuspalette[japi.status][2];
+        navbar.text.style.color = japi.statuspalette[japi.status][2];
+      }
     });
 
   // This code snippet controls when the console shoudl disappear from the screen
@@ -98,9 +105,7 @@ fetch("https://ipadd.jsmsj.repl.co/")
   .then((e) => e.text())
   .then(async (ipres) => {
     if (
-      window.location.href == "https://flothaboss1000.github.io/JsM-Bot/" ||
-      window.location.href ==
-        "https://flothaboss1000.github.io/JsM-Bot/index.html" ||
+      window.location.href.startsWith("https://flothaboss1000.github.io/") ||
       window.location.href.startsWith("http://127.0.0.1")
     ) {
       return;

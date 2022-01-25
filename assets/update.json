@@ -1,8 +1,4 @@
 {
-  "title": "Update 1.3.0",
-  "list": [
-    "+ Added 'Privacy Policy' page",
-    "- Disabled the server bot widget by default",
-    "# Modified links in footer"
-  ]
+  "title": "Update 1.3.1",
+  "list": ["+ Added custom colours to the announcement for each category"]
 }
