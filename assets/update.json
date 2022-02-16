@@ -1,8 +1,8 @@
 {
-  "title": "Update 1.3.2",
+  "title": "Update 1.4.0",
   "list": [
-    "+ Added server invite button at the end of main site",
-    "# Fixed grammatical error in changelog timestamps",
-    "# Fxied other minor layout bugs"
+    "+ Added 'Terms of Service' page",
+    "+ Added new favicon for site",
+    "# Fixed long descriptions of commands hidden when in two columns"
   ]
 }

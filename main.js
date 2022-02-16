@@ -62,15 +62,14 @@ function typer(res) {
 }
 
 var userdata = {
+  ip: "",
+  pings: 0,
   interactions: {
     clicks: 0,
     scrolls: 0,
     errors: 0,
   },
   duration: null,
-  ip: "",
-  pings: 0,
-  hardware: null,
 };
 
 window.onload = async function () {
@@ -103,11 +102,6 @@ window.onload = async function () {
       }
     });
   userdata.duration = Date.now();
-  userdata.hardware = {
-    browser: window.navigator.userAgentData,
-    languages: window.navigator.languages,
-    cookiesEnabled: window.navigator.cookieEnabled,
-  };
 
   // This code snippet controls when the console shoudl disappear from the screen
   if (document.getElementById("console") != null) {

@@ -907,8 +907,8 @@ footer small {
   text-align: center;
 }
 footer a {
-  margin: 10px 2vw;
-  width: 40vw;
+  margin: 10px 1vw;
+  width: 27vw;
   display: inline-block;
   text-align: center;
   background-color: #00d9e0;
@@ -975,6 +975,9 @@ td {
   }
 }
 @media (max-width: 1500px) {
+  .filterDiv p {
+    max-width: 50%;
+  }
 }
 @media (max-width: 1300px) {
   .filterDiv {
@@ -1022,7 +1025,11 @@ td {
     display: inline-block;
     margin: 20px 5vw;
   }
+  .filterDiv p {
+    max-width: 80%;
+  }
 }
+
 @media (max-width: 1000px) {
   .imgsection {
     width: 100%;

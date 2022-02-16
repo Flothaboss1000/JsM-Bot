@@ -1,0 +1,135 @@
+body {
+
+  background-color: #210000;
+  opacity: 1;
+  color: white;
+  margin: 50px 10vw 100px 10vw;
+  font-size: 18px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+h1 {
+  color: #ff0000;
+  font-family: "Poiret One";
+  font-size: 90px;
+  text-align: center;
+  margin: 10px;
+}
+h2 {
+  font-size: 30px;
+  margin-top: 60px;
+  font-family: "Josefin Sans";
+}
+h3 {
+  margin: 10px;
+  text-align: center;
+  font-size: 60px;
+  color: #ffc6c6;
+  font-family: "Fugaz One";
+}
+
+p {
+  font-family: "Poppins";
+}
+a {
+  font-family: "Ubuntu Mono";
+  color: #ff0101;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  background-color: #ff0000;
+  color: black;
+}
+hr {
+  margin: 40px;
+}
+
+.mainbutton {
+  height: fit-content;
+  position: relative;
+  margin-bottom: 20px;
+}
+.center {
+  margin: 0px auto;
+  width: fit-content;
+}
+.mainbutton a {
+  font-family: "Ubuntu Mono";
+  color: #ff3d3d;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.button {
+  border: none;
+  outline: none;
+  padding: 12px 16px 10px 16px;
+  background-color: #5f2323;
+  box-shadow: 0px 10px 20px #000000a2;
+  color: #ffb6b6;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 80px;
+  transition: 0.5s;
+  width: 115px;
+  margin: 10px 5px;
+  display: inline-block;
+}
+.button:hover {
+  background-color: #ff9b9b;
+  box-shadow: 0px 10px 20px #5f2323;
+  color: #ad0000;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.button:active {
+  background-color: #ff2a2a;
+  color: #ffd1d1;
+  transition: 0.2s;
+}
+.button p {
+  font-family: "Josefin Sans";
+  font-size: 15px;
+  margin: 0;
+}
+
+ul {
+  font-family: "Poppins";
+  border-left: 10px solid #ff0000;
+  border-radius: 10px;
+  width: auto;
+  padding: 20px;
+  padding-left: 40px;
+}
+li {
+  margin: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2c2c;
+  transition: 0.2s;
+}
