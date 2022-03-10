@@ -233,6 +233,30 @@ function navbarclose() {
   document.getElementById("navbar").style.filter = "saturate(0)";
 }
 
+navbar.self.collapsed = false;
+function bannerexpandcollapse() {
+  if (!navbar.self.collapsed) {
+    navbar.self.style.width = "95vw";
+    navbar.self.style.height = "fit-content";
+    navbar.self.collapsed = true;
+    navbar.text.style.visibility = "visible";
+    setTimeout(() => {
+      navbar.text.style.opacity = "1";
+    }, 500);
+    // document.getElementById("announcetext").style.visibility = "visible";
+    document.getElementById("navclose").style.visibility = "visible";
+    navbar.self.style.animation = "unset";
+  } else {
+    navbar.self.style.width = "75px";
+    navbar.self.style.height = "75px";
+    navbar.self.collapsed = false;
+    navbar.text.style.opacity = "0";
+    navbar.text.style.visibility = "hidden";
+    // document.getElementById("announcetext").style.visibility = "hidden";
+    document.getElementById("navclose").style.visibility = "hidden";
+  }
+}
+
 // window.addEventListener("click", async () => userdata.interactions.clicks++);
 // window.addEventListener("scroll", async () => userdata.interactions.scrolls++);
 // window.addEventListener("error", async () => userdata.interactions.errors++);

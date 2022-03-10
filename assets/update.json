@@ -1,8 +1,11 @@
 {
-  "title": "Update 1.4.0",
+  "title": "Update 1.4.1",
   "list": [
-    "+ Added 'Terms of Service' page",
-    "+ Added new favicon for site",
-    "# Fixed long descriptions of commands hidden when in two columns"
+    "+ Improved announcement banner to be collapsed on start",
+    "+ Added descriptions to most buttons on hover",
+    "+ Added icons to the buttons at the footer",
+    "# Slightly modified description of the bot in the cards",
+    "# Darkened the alert message in the commands list",
+    "# Modified 'Skip Loading' button to be less standing out"
   ]
 }

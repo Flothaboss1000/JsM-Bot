@@ -185,7 +185,6 @@ a:active {
 #console a {
   font-size: 14px;
   color: #0bc;
-  text-decoration: none;
 }
 #skipload {
   position: fixed;
@@ -194,7 +193,6 @@ a:active {
   width: 150px;
   left: 50%;
   margin-left: -75px;
-  outline: none;
   border: none;
   padding: 10px;
   font-family: monospace;
@@ -202,6 +200,8 @@ a:active {
   border-radius: 10px;
   z-index: 101;
   cursor: pointer;
+  background-color: transparent;
+  color: orange;
 }
 
 #a {
@@ -336,7 +336,7 @@ a:active {
   position: fixed;
   top: 10px;
   margin: 0px 2.5vw 20px;
-  width: 95vw;
+  width: 75px;
   z-index: 75;
   border-radius: 15px;
   transition: 0.5s;
@@ -344,6 +344,24 @@ a:active {
   box-shadow: 0 20px 50px #00000096;
   height: 75px;
   display: flex;
+  animation-name: navbarblinkfirst;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+@keyframes navbarblinkfirst {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.5);
+  }
+}
+#announce {
+  transition: 0.15s;
+  visibility: hidden;
+  opacity: 0;
 }
 #announcetext {
   flex-grow: 10;
@@ -376,6 +394,7 @@ a:active {
   float: left;
   justify-self: left;
   user-select: none;
+  cursor: pointer;
 }
 #navclose {
   flex-grow: 0;
@@ -390,6 +409,7 @@ a:active {
   cursor: pointer;
   user-select: none;
   z-index: 85;
+  visibility: hidden;
 }
 #navclose:hover {
   background-color: #ff6868;
@@ -725,8 +745,8 @@ button .cmdbtn + p {
   transition: 0.2s;
 }
 #alert {
-  background-color: #e4e47f;
-  color: #8f911f;
+  background-color: #666600;
+  color: #e8ec00;
   text-align: center;
   vertical-align: middle;
   padding: 5px;
@@ -747,6 +767,7 @@ button .cmdbtn + p {
 }
 #iconalert {
   background-color: #d4d45d;
+  color: #666600;
   padding: 10px;
   border-radius: 15px;
   left: 0px;
@@ -758,7 +779,7 @@ button .cmdbtn + p {
 #alert button {
   cursor: pointer;
   position: relative;
-  background-color: #ff9e9e;
+  background-color: #5a2a2a;
   border: none;
   outline: none;
   padding: 10px;
@@ -769,7 +790,7 @@ button .cmdbtn + p {
   height: 45px;
   right: 0%;
   display: inline-block;
-  color: #8d0000;
+  color: #fc7979;
 }
 #alert .material-icons.md-36 {
   font-size: 25px;
@@ -907,6 +928,7 @@ footer small {
   text-align: center;
 }
 footer a {
+  font-size: 17px;
   margin: 10px 1vw;
   width: 27vw;
   display: inline-block;
@@ -915,6 +937,13 @@ footer a {
   padding: 10px 0px;
   color: #002d33;
   border-radius: 10px;
+}
+footer a span {
+  position: relative;
+  left: 10px;
+  display: block;
+  float: left;
+  color: #00626e;
 }
 footer a:visited {
   color: #002d33;
@@ -1050,14 +1079,14 @@ td {
     font-size: 14px;
   }
   #navbar {
-    height: fit-content;
+    height: 75px;
     display: inline-block;
   }
   #navicon {
     width: 75%;
     text-align: center;
     flex-grow: unset;
-    margin: 10px 2.5%;
+    margin: 10px;
     position: relative;
   }
   #navclose {

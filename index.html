@@ -64,7 +64,13 @@
       </button>
     </div>
     <div id="navbar">
-      <span id="navicon" class="material-icons md-36">pending</span>
+      <span
+        id="navicon"
+        class="material-icons md-36"
+        onclick="bannerexpandcollapse()"
+        title="Click to expand or collapse the announcemnet banner"
+        >pending</span
+      >
       <div id="announcetext">
         <p id="announce">
           Looks like you loaded the site early! Please wait while we check for
@@ -89,44 +95,51 @@
       A powerful and multipurpose Discord bot
     </p>
     <br />
-    <button id="totop" onclick="scrollToTop()">
+    <button
+      id="totop"
+      onclick="scrollToTop()"
+      title="Go to the top of the page"
+    >
       <span class="material-icons md-48"> expand_less </span>
     </button>
 
     <div class="mainbutton">
       <div class="center">
         <a href="https://dsc.gg/jsmbot" target="_blank">
-          <button class="button">
+          <button class="button" title="Invite the bot to your server">
             <span class="material-icons md-36">send</span>
             <p>Invite Me</p>
           </button>
         </a>
         <a href="https://top.gg/bot/870932828504866816" target="_blank">
-          <button class="button">
+          <button class="button" title="Visit the bot's page in Top.gg">
             <span class="material-icons md-36">web</span>
             <p>Top.gg</p>
           </button>
         </a>
         <a href="https://dsc.gg/jsmsupport" target="_blank">
-          <button class="button">
+          <button
+            class="button"
+            title="Get invite link to the bot's support server"
+          >
             <span class="material-icons md-36">contact_support</span>
             <p>Support</p>
           </button>
         </a>
         <a href="https://statcord.com/bot/870932828504866816/" target="_blank">
-          <button class="button">
+          <button class="button" title="View statistics of the bot">
             <span class="material-icons md-36">trending_up</span>
             <p>Statistics</p>
           </button>
         </a>
         <a href="https://stats.uptimerobot.com/yzq6Bt722D" target="_blank">
-          <button class="button">
+          <button class="button" title="View the uptime of the bot">
             <span class="material-icons md-36">sensors</span>
             <p>Uptime</p>
           </button>
         </a>
         <a href="#cdmheader">
-          <button class="button">
+          <button class="button" title="Go to the bot's commands">
             <span class="material-icons md-36">terminal</span>
             <p>Commands</p>
           </button>
@@ -208,8 +221,9 @@
       <div class="imgsection" id="card3">
         <h4>A creative image generator!</h4>
         <p>
-          Generate a variety of customizable images. Additionally, you can fetch
-          certain random images or search for your own choice of image.
+          Generate a variety of customizable images, ranging from popular memes
+          to modded profile pictures. Additionally, you can fetch certain random
+          images or search for your own choice of image.
         </p>
         <div class="slideshow-container">
           <div class="mySlides3">
@@ -304,7 +318,7 @@
           I have much more capability and functionality to offer. I provide many
           amusing fun commands and other miscellanous tools, such as currency
           conversion, dictionary, wikipedia. Plus, I get updated with more
-          commands regulary.
+          commands regularly.
         </p>
         <div class="slideshow-container">
           <div class="mySlides6">
@@ -348,11 +362,17 @@
         class="cmdbtn active"
         onclick="filterSelection('')"
         id="cmdbtn_grey"
+        title="View all commands"
       >
         <span class="material-icons md-36"> apps </span>
         <br />All
       </button>
-      <button class="cmdbtn" onclick="filterSelection('mod')" id="cmdbtn_red">
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('mod')"
+        id="cmdbtn_red"
+        title="Filter moderation commands"
+      >
         <span class="material-icons md-36">gavel</span>
         <br />Moderation
       </button>
@@ -360,6 +380,7 @@
         class="cmdbtn"
         onclick="filterSelection('fun')"
         id="cmdbtn_orange"
+        title="Filter fun commands"
       >
         <span class="material-icons md-36">celebration</span>
         <br />Fun
@@ -368,11 +389,17 @@
         class="cmdbtn"
         onclick="filterSelection('util')"
         id="cmdbtn_yellow"
+        title="Filter utility commands"
       >
         <span class="material-icons md-36">settings</span>
         <br />Utility
       </button>
-      <button class="cmdbtn" onclick="filterSelection('img')" id="cmdbtn_green">
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('img')"
+        id="cmdbtn_green"
+        title="Filter image commands"
+      >
         <span class="material-icons md-36">image</span>
         <br />Image
       </button>
@@ -380,6 +407,7 @@
         class="cmdbtn"
         onclick="filterSelection('music')"
         id="cmdbtn_teal"
+        title="Filter music commands"
       >
         <span class="material-icons md-36">music_note</span>
         <br />Music
@@ -388,11 +416,17 @@
         class="cmdbtn"
         onclick="filterSelection('maths')"
         id="cmdbtn_cyan"
+        title="Filter maths commands"
       >
         <span class="material-icons md-36">calculate</span>
         <br />Maths
       </button>
-      <button class="cmdbtn" onclick="filterSelection('chem')" id="cmdbtn_blue">
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('chem')"
+        id="cmdbtn_blue"
+        title="Filter chemistry commands"
+      >
         <span class="material-icons md-36">science</span>
         <br />Chemistry
       </button>
@@ -400,6 +434,7 @@
         class="cmdbtn"
         onclick="filterSelection('prog')"
         id="cmdbtn_indigo"
+        title="Filter programming commands"
       >
         <span class="material-icons md-36">code</span>
         <br />Programming
@@ -408,11 +443,17 @@
         class="cmdbtn"
         onclick="filterSelection('api')"
         id="cmdbtn_purple"
+        title="Filter API-based commands"
       >
         <span class="material-icons md-36">api</span>
         <br />API
       </button>
-      <button class="cmdbtn" onclick="filterSelection('misc')" id="cmdbtn_pink">
+      <button
+        class="cmdbtn"
+        onclick="filterSelection('misc')"
+        id="cmdbtn_pink"
+        title="Filter miscellanous commands"
+      >
         <span class="material-icons md-36">add</span>
         <br />Miscellaneous
       </button>
@@ -1506,7 +1547,7 @@
     <div class="mainbutton">
       <div class="center">
         <a href="https://dsc.gg/jsmbot" target="_blank">
-          <button class="button">
+          <button class="button" title="Invite the bot to your server">
             <span class="material-icons md-36">send</span>
             <p>Invite Me</p>
           </button>
@@ -1518,14 +1559,23 @@
     <div class="mainbutton">
       <div class="center">
         <a>
-          <button class="button" id="loadwidget" onclick="loadwidget(this)">
+          <button
+            class="button"
+            id="loadwidget"
+            onclick="loadwidget(this)"
+            title="Load preview of support server directly from this site"
+          >
             <span class="material-icons md-36">widgets</span>
             <p>Load Server Widget</p>
             <small>Requires cookies</small>
           </button>
         </a>
         <a href="https://dsc.gg/jsmsupport" target="_blank">
-          <button class="button" id="loadwidget">
+          <button
+            class="button"
+            id="loadwidget"
+            title="Get invite link to the bot's support server"
+          >
             <span class="material-icons md-36">person_add</span>
             <p>Join Server</p>
             <small>Discord server link</small>
@@ -1557,9 +1607,22 @@
         </tbody>
       </table>-->
       <small id="ver"></small>
-      <a href="https://jsm-bot.github.io/terms/">Terms of Service</a>
-      <a href="./pages/changelog/changelog.html">Bot Changelog</a>
-      <a href="https://jsm-bot.github.io/privacy/">Privacy Policy</a>
+      <a
+        href="https://jsm-bot.github.io/terms/"
+        title="View the terms and conditions of our services"
+        ><span class="material-icons md-36">handshake</span>Terms of Service</a
+      >
+      <a
+        href="./pages/changelog/changelog.html"
+        \
+        title="View the history of the major updates to the bot"
+        ><span class="material-icons md-36">subject</span>Bot Changelog</a
+      >
+      <a
+        href="https://jsm-bot.github.io/privacy/"
+        title="View the privacy policy of our services"
+        ><span class="material-icons md-36">policy</span>Privacy Policy</a
+      >
     </footer>
     <script src="main.js"></script>
   </body>
