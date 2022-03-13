@@ -1,11 +1,6 @@
 {
-  "title": "Update 1.4.1",
+  "title": "Update 1.4.2",
   "list": [
-    "+ Improved announcement banner to be collapsed on start",
-    "+ Added descriptions to most buttons on hover",
-    "+ Added icons to the buttons at the footer",
-    "# Slightly modified description of the bot in the cards",
-    "# Darkened the alert message in the commands list",
-    "# Modified 'Skip Loading' button to be less standing out"
+    "+ Added discreet announcement regarding verification of bot temporarily"
   ]
 }

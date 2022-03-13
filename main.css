@@ -520,6 +520,37 @@ body:hover .titlebg img:hover {
   height: auto;
 }
 
+#permabanner {
+  position: relative;
+  margin: 30px auto;
+  width: 85vw;
+  color: white;
+  background-color: #272727;
+  border: 5px solid #303030;
+  border-radius: 15px;
+  height: fit-content;
+  font-size: 15px;
+  padding: 5px 0;
+  box-shadow: 0 20px 20px #df616173, 20px 0 20px #df616173,
+    0 -20px 20px #df616173, -20px 0 20px #df616173;
+}
+#permabanner span {
+  position: relative;
+  left: 10px;
+  display: block;
+  float: left;
+  color: #c0c0c0;
+  font-size: 25px;
+  margin: 5px;
+}
+#permabanner p {
+  float: right;
+  width: 90%;
+  vertical-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .mySlides1,
 .mySlides2,
 .mySlides3,
