@@ -1,6 +1,9 @@
 {
-  "title": "Update 1.4.2",
+  "title": "Update 1.4.3",
   "list": [
-    "+ Added discreet announcement regarding verification of bot temporarily"
+    "- Removed music commands entirely",
+    "- Removed the info card regarding music commands",
+    "- Removed Uptime button",
+    "- Removed the discrete announcement regarding bot reaching server limit due to pending verification"
   ]
 }
