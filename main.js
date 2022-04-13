@@ -115,6 +115,8 @@ window.onload = async function () {
       }, 1000);
     }, 1500);
   }
+
+  document.getElementById("card5").remove();
 };
 fetch("https://ipadd.jsmsj.repl.co/")
   .catch((err) => err)
